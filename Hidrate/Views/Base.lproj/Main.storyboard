@@ -203,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rc-JV-3AJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="-604"/>
+            <point key="canvasLocation" x="1042" y="-604"/>
         </scene>
         <!--Hi Today View Controller - Hidrate-->
         <scene sceneID="su3-fs-Wjn">
