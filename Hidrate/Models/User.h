@@ -17,6 +17,5 @@
 @property (nonatomic) int16_t feet;
 @property (nonatomic) int16_t inches;
 @property (nonatomic, retain) NSString * gender;
-@property (nonatomic) float dailyWater;
 
 @end
