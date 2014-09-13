@@ -7,6 +7,8 @@
 //
 
 #import "HiInitialSetupViewController.h"
+#import "HiAppDelegate.h"
+#import "User.h"
 
 @interface HiInitialSetupViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderControl;
@@ -58,6 +60,33 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Data" message:@"You must complete all the fields" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
         [alert show];
     }else{
+        
+        NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+        
+        NSFetchRequest *fr = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                                  inManagedObjectContext:context];
+        [fr setEntity:entity];
+        NSArray *fetchedObjects = [context executeFetchRequest:fr error:NULL];
+        
+        if(fetchedObjects.count > 0){
+            for(User *u in fetchedObjects){
+                [context deleteObject:u];
+            }
+        }
+        
+        User *u = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+        u.feet = feet;
+        u.inches = inches;
+        u.weight = weight;
+        if(self.genderControl.selectedSegmentIndex == 0){
+            u.gender = @"Male";
+        }else{
+            u.gender = @"Female";
+        }
+        
+        [context save:NULL];
+        
         [self performSegueWithIdentifier:@"showToday" sender:self];
     }
 }
