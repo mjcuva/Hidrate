@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>6CAFD8AB-9A88-4DCC-8B0B-2B425D36DA82</string>
+=======
+	<string>22ADA698-120B-424D-83D6-30448ED1A930</string>
+>>>>>>> b27e1abdd6f750253f01af6c15efaa77ac5fc1be
+	<key>IDESourceControlProjectName</key>
+	<string>Hidrate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+<<<<<<< HEAD
+		<key>D96229F0-A164-437E-B7C1-DC31A629E47B</key>
+=======
+		<key>B3846C73-7233-4909-BF88-0B6341327B48</key>
+>>>>>>> b27e1abdd6f750253f01af6c15efaa77ac5fc1be
+		<string>https://github.com/mjcuva/Hidrate.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hidrate.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+<<<<<<< HEAD
+		<key>D96229F0-A164-437E-B7C1-DC31A629E47B</key>
+=======
+		<key>B3846C73-7233-4909-BF88-0B6341327B48</key>
+>>>>>>> b27e1abdd6f750253f01af6c15efaa77ac5fc1be
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mjcuva/Hidrate.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
+	<string>D96229F0-A164-437E-B7C1-DC31A629E47B</string>
+=======
+	<string>B3846C73-7233-4909-BF88-0B6341327B48</string>
+>>>>>>> b27e1abdd6f750253f01af6c15efaa77ac5fc1be
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
+			<string>D96229F0-A164-437E-B7C1-DC31A629E47B</string>
+=======
+			<string>B3846C73-7233-4909-BF88-0B6341327B48</string>
+>>>>>>> b27e1abdd6f750253f01af6c15efaa77ac5fc1be
+			<key>IDESourceControlWCCName</key>
+			<string>Hidrate</string>
+		</dict>
+	</array>
+</dict>
+</plist>
