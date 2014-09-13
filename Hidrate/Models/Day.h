@@ -12,7 +12,7 @@
 
 @interface Day : NSManagedObject
 
-@property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) NSNumber * amountDrank;
+@property (nonatomic) double amountDrank;
+@property (nonatomic) NSTimeInterval date;
 
 @end
