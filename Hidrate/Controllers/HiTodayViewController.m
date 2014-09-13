@@ -14,6 +14,9 @@
 
 @implementation HiTodayViewController
 
+const int LOW_WATER_PX = 383;
+const int HIGH_WATER_DIFF_PX = 284;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,7 +28,10 @@
 
 - (IBAction)debugSliderChanged:(UISlider *)sender
 {
-    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", (int)[sender value]]];
+    int water_level = (int)[sender value];
+    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", water_level]];
+    int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * water_level) / 100);
+    [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
