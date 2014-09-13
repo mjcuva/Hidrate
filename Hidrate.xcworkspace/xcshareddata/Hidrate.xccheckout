@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6ACBB0ED-50C0-4009-8245-67AA8D6C169B</string>
+	<string>6CAFD8AB-9A88-4DCC-8B0B-2B425D36DA82</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Hidrate</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EFDF76EF-0453-41F0-82CE-C6C6DE073484</key>
-		<string>https://github.com/mjcuva/Hidrate</string>
+		<key>D96229F0-A164-437E-B7C1-DC31A629E47B</key>
+		<string>https://github.com/mjcuva/Hidrate.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Hidrate.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EFDF76EF-0453-41F0-82CE-C6C6DE073484</key>
+		<key>D96229F0-A164-437E-B7C1-DC31A629E47B</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mjcuva/Hidrate</string>
+	<string>https://github.com/mjcuva/Hidrate.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EFDF76EF-0453-41F0-82CE-C6C6DE073484</string>
+	<string>D96229F0-A164-437E-B7C1-DC31A629E47B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EFDF76EF-0453-41F0-82CE-C6C6DE073484</string>
+			<string>D96229F0-A164-437E-B7C1-DC31A629E47B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Hidrate</string>
 		</dict>
