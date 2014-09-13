@@ -225,6 +225,8 @@
 				4913A54D19C3E3DD0038BADB /* Frameworks */,
 				4913A54E19C3E3DD0038BADB /* Resources */,
 				DDBC168F8EC54C1885EA970B /* Copy Pods Resources */,
+				36F8B5BC19C496C600A2C04A /* Increment Build Number */,
+				36F8B5BB19C496A800A2C04A /* Add Warnings for Code Smells */,
 			);
 			buildRules = (
 			);
@@ -309,6 +311,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		36F8B5BB19C496A800A2C04A /* Add Warnings for Code Smells */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Add Warnings for Code Smells";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|NSLog|error:nil|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}/Hidrate\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+		36F8B5BC19C496C600A2C04A /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 		DDBC168F8EC54C1885EA970B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
