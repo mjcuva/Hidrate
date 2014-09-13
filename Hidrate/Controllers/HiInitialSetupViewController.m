@@ -9,7 +9,11 @@
 #import "HiInitialSetupViewController.h"
 
 @interface HiInitialSetupViewController ()
-
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderControl;
+@property (weak, nonatomic) IBOutlet UITextField *enterAge;
+@property (weak, nonatomic) IBOutlet UITextField *enterWeight;
+@property (weak, nonatomic) IBOutlet UITextField *enterFeet;
+@property (weak, nonatomic) IBOutlet UITextField *enterInches;
 @end
 
 @implementation HiInitialSetupViewController
@@ -26,6 +30,10 @@
 - (void)viewDidLoad
 {
     [[self navigationItem] setHidesBackButton:YES];
+}
+
+- (IBAction)continue {
+    NSLog(@"HERE");
 }
 
 @end

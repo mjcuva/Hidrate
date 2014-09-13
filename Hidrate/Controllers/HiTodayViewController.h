@@ -10,4 +10,10 @@
 
 @interface HiTodayViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *waterPercentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *waterBottlesLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *wavesImage;
+
+- (void)setWaterPercentConsumed:(int)percent;
+
 @end

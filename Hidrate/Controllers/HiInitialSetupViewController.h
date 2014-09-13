@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HiInitialSetupViewController : UIViewController
+@interface HiInitialSetupViewController : UITableViewController
 
 @end

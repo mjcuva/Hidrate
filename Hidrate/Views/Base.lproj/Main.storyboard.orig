@@ -42,12 +42,18 @@
             </objects>
             <point key="canvasLocation" x="513" y="78"/>
         </scene>
+<<<<<<< HEAD
+        <!--Hi Initial Setup View Controller-->
+        <scene sceneID="Jom-2R-W2c">
+=======
         <!--Hi Initial Setup View Controller - User Data-->
         <scene sceneID="urW-bq-TLQ">
+>>>>>>> 352cc67a91ec380335faa52a7edc220ac5d8f35a
             <objects>
                 <tableViewController id="piZ-59-CsB" customClass="HiInitialSetupViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ml9-vO-bf2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+<<<<<<< HEAD
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <label key="tableHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us configure the bottle to you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" id="Vws-Eo-ZtO">
@@ -202,6 +208,32 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rc-JV-3AJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+=======
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input user data here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54J-OD-F1v">
+                                <rect key="frame" x="83" y="273" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCL-Wg-J2I">
+                                <rect key="frame" x="129" y="302" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZdY-Nq-N9U" kind="push" id="aNS-Ag-Wwf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Data" id="WNz-z4-ujX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="env-KN-UJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+>>>>>>> 352cc67a91ec380335faa52a7edc220ac5d8f35a
             </objects>
             <point key="canvasLocation" x="1042" y="-604"/>
         </scene>
@@ -236,9 +268,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About 2 more
-bottles to go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="x5G-LI-AFd">
-                                <rect key="frame" x="22" y="397" width="277" height="120"/>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About 2 more bottles to go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="x5G-LI-AFd">
+                                <rect key="frame" x="22" y="396" width="277" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,7 +289,7 @@ bottles to go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLin
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="8go-i6-9qO"/>
                         <barButtonItem key="rightBarButtonItem" title="History" id="Xkx-p2-Af9">
                             <connections>
-                                <segue destination="1li-JR-tD3" kind="push" id="z8I-ym-daK"/>
+                                <segue destination="U5y-1y-fQj" kind="push" id="1tm-nz-X04"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -272,50 +303,32 @@ bottles to go" textAlignment="center" lineBreakMode="tailTruncation" numberOfLin
             </objects>
             <point key="canvasLocation" x="1333" y="78"/>
         </scene>
-        <!--Hi History Table View Controller - History-->
-        <scene sceneID="rcz-3m-5st">
+        <!--Hi History View Controller - History-->
+        <scene sceneID="EtZ-tv-BC1">
             <objects>
-                <tableViewController id="1li-JR-tD3" customClass="HiHistoryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ouU-Lw-71O">
+                <viewController id="U5y-1y-fQj" customClass="HiHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sxp-JG-WfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="S7s-wC-jfZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jXC-WN-LmN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" textLabel="92O-r2-Vng" detailTextLabel="w54-Zk-BdI" style="IBUITableViewCellStyleValue1" id="t9P-5b-DNZ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9P-5b-DNZ" id="TxO-z2-fxO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="92O-r2-Vng">
-                                            <rect key="frame" x="15" y="11" width="30" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Right" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w54-Zk-BdI">
-                                            <rect key="frame" x="264" y="11" width="41" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1li-JR-tD3" id="obL-kO-lWl"/>
-                            <outlet property="delegate" destination="1li-JR-tD3" id="h0U-GJ-6Gx"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="History" id="Op0-PZ-UNl"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="em1-qo-g7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV8-PB-mWW">
+                                <rect key="frame" x="133" y="273" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="IdH-tS-tyA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Bx-Aq-uti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1715" y="78"/>
+            <point key="canvasLocation" x="1743" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qjw-RV-V9o">
