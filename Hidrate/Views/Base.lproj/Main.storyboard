@@ -99,7 +99,7 @@
                                 <rect key="frame" x="26" y="383" width="261" height="302"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="42%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-qD-7BV">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-qD-7BV">
                                 <rect key="frame" x="59" y="236" width="203" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="72"/>
@@ -120,6 +120,9 @@
                             <slider appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8HK-0U-ewp">
                                 <rect key="frame" x="18" y="518" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="debugSliderChanged:" destination="ZdY-Nq-N9U" eventType="valueChanged" id="wre-9g-z9X"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -133,9 +136,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DebugSlider" destination="8HK-0U-ewp" id="Hlh-YQ-VsO"/>
-                        <outlet property="WaterPercentLabel" destination="2xL-qD-7BV" id="52s-jC-0I7"/>
-                        <outlet property="WavesImage" destination="3rc-9r-tA6" id="2tR-9n-BBO"/>
+                        <outlet property="waterBottlesLabel" destination="x5G-LI-AFd" id="hYP-sX-eOd"/>
+                        <outlet property="waterPercentLabel" destination="2xL-qD-7BV" id="e9P-6B-GaT"/>
+                        <outlet property="wavesImage" destination="3rc-9r-tA6" id="FqD-mt-IlN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3G-uj-8Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
