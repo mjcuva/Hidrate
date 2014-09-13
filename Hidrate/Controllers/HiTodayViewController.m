@@ -8,6 +8,8 @@
 
 #import "HiTodayViewController.h"
 #import "PTDBeanManager.h"
+#import "HiAppDelegate.h"
+#import "Day.h"
 
 @interface HiTodayViewController ()<PTDBeanManagerDelegate, PTDBeanDelegate>
 @property (strong, nonatomic) PTDBeanManager *beanManager;
@@ -87,6 +89,26 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self navigationItem] setHidesBackButton:YES];
 
     self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self];
+    
+    NSManagedObjectContext *context = ((HiAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    NSFetchRequest *fr = [NSFetchRequest fetchRequestWithEntityName:@"Day"];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    
+    int day = (int)[components day];
+    int month = (int)[components month];
+    int year = (int)[components year];
+
+    fr.predicate = [NSPredicate predicateWithFormat:@"day=%ul AND month=%ul AND year=%ul", day, month, year];
+    
+    NSArray *results = [context executeFetchRequest:fr error:NULL];
+    if(results.count == 0){
+        Day *d = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
+        d.day = day;
+        d.year = year;
+        d.month = month;
+        [context save:NULL];
+    }
 }
 
 - (void)setWaterPercentConsumed:(int)percent

@@ -9,14 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface waterIntake : NSObject
-@property float height; //meters
-@property float weight; //kg
-@property float BMR;
-@property float age;   //years
-@property NSString *activity;
-@property NSString *gender;
 @property (nonatomic) float dailyWater;
-@property (nonatomic) float percentOfDailyDrink;
-@property (nonatomic) float cupsLeft;
 
 @end

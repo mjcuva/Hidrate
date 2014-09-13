@@ -12,9 +12,9 @@
 @implementation User
 
 @dynamic age;
-@dynamic weight;
 @dynamic feet;
-@dynamic inches;
 @dynamic gender;
+@dynamic inches;
+@dynamic weight;
 
 @end

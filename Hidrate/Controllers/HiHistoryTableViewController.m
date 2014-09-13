@@ -8,6 +8,7 @@
 
 #import "HiHistoryTableViewController.h"
 #import "HiAppDelegate.h"
+#import "Day.h"
 
 @interface HiHistoryTableViewController ()
 @property (strong, nonatomic) NSArray *days;
@@ -30,8 +31,10 @@
     
     NSManagedObjectContext *context = ((HiAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
     NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"Day"];
-    NSSortDescriptor *dateSort = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
-    fr.sortDescriptors = @[dateSort];
+    NSSortDescriptor *daySort = [[NSSortDescriptor alloc] initWithKey:@"day" ascending:NO];
+    NSSortDescriptor *monthSort = [[NSSortDescriptor alloc] initWithKey:@"month" ascending:NO];
+    NSSortDescriptor *yearSort = [[NSSortDescriptor alloc] initWithKey:@"year" ascending:NO];
+    fr.sortDescriptors = @[daySort, monthSort, yearSort];
     
     self.days = [context executeFetchRequest:fr error:NULL];
 }
@@ -85,7 +88,8 @@
     } else {
         dayWaterAmount = arc4random() % 100;
     }
-    [[cell textLabel] setText:[self.days[indexPath.item] description]];
+    Day *date = self.days[indexPath.item];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%i-%i-%i", date.month, date.day, date.year]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%", dayWaterAmount]];
     return cell;
 }

@@ -7,21 +7,21 @@
 //
 
 #import "waterIntake.h"
+#import "Day.h"
+#import "User.h"
 
 @implementation waterIntake
-@synthesize height; //meters
-@synthesize weight; //kg
-@synthesize BMR;
-@synthesize age;   //years
-@synthesize activity;
-@synthesize gender;
-
 -(float)dailyWater{
-    return _dailyWater;
+    return self.dailyWater;
 }
 
 -(void)setDailyWater{
-    if([gender isEqualToString:@"female"]){
+    float BMR;
+    float height;
+    
+    
+    
+    if([gender isEqualToString:@"Female"]){
         BMR = 88.362;
         BMR += 13.297*height;//weight modifier
         BMR += 4.799*weight; //height modifier

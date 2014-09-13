@@ -13,9 +13,9 @@
 @interface User : NSManagedObject
 
 @property (nonatomic) int16_t age;
-@property (nonatomic) double weight;
 @property (nonatomic) int16_t feet;
-@property (nonatomic) int16_t inches;
 @property (nonatomic, retain) NSString * gender;
+@property (nonatomic) int16_t inches;
+@property (nonatomic) double weight;
 
 @end
