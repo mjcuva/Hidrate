@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Hi Welcome View Controller-->
+        <!--Hi Welcome View Controller - Welcome-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="HiWelcomeViewController" sceneMemberID="viewController">
@@ -36,13 +36,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FqD-Od-Ecm"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="FqD-Od-Ecm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513" y="78"/>
         </scene>
-        <!--Hi Initial Setup View Controller-->
+        <!--Hi Initial Setup View Controller - User Data-->
         <scene sceneID="urW-bq-TLQ">
             <objects>
                 <viewController id="r0d-l1-Vcm" customClass="HiInitialSetupViewController" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WNz-z4-ujX"/>
+                    <navigationItem key="navigationItem" title="User Data" id="WNz-z4-ujX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="env-KN-UJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

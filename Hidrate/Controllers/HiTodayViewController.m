@@ -26,12 +26,16 @@ const int HIGH_WATER_DIFF_PX = 284;
     return self;
 }
 
+- (void)setWaterPercentConsumed:(int)percent
+{
+    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
+    int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * percent) / 100);
+    [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
+}
+
 - (IBAction)debugSliderChanged:(UISlider *)sender
 {
-    int water_level = (int)[sender value];
-    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", water_level]];
-    int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * water_level) / 100);
-    [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
+    [self setWaterPercentConsumed:[sender value]];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
