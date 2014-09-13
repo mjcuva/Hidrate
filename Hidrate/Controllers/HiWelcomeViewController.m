@@ -23,4 +23,8 @@
     return self;
 }
 
+- (void)viewDidLoad{
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
 @end
