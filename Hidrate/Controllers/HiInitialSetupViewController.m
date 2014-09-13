@@ -25,18 +25,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
     [[self navigationItem] setHidesBackButton:YES];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
