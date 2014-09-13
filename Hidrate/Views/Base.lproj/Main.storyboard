@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yCv-Ta-0Pd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yCv-Ta-0Pd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -194,20 +194,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pJq-CB-sza">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Uhc-rP-cwg">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ufL-zJ-4bQ">
-                                <rect key="frame" x="16" y="5" width="71" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Fill Data">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="fillData" destination="piZ-59-CsB" eventType="touchUpInside" id="ktF-h6-91F"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Fill Fields" id="AM3-xc-caK">
                             <connections>
-                                <action selector="fillData:" destination="piZ-59-CsB" id="cUf-r0-Xqz"/>
+                                <action selector="fillData" destination="piZ-59-CsB" id="9Q5-6T-mdW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
