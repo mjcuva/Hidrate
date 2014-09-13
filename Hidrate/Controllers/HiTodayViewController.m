@@ -9,7 +9,7 @@
 #import "HiTodayViewController.h"
 #import "PTDBeanManager.h"
 
-@interface HiTodayViewController () <PTDBeanManagerDelegate, PTDBeanDelegate>
+@interface HiTodayViewController ()<PTDBeanManagerDelegate, PTDBeanDelegate>
 @property (strong, nonatomic) PTDBeanManager *beanManager;
 @property (strong, nonatomic) PTDBean *connectedBean;
 @property (weak, nonatomic) IBOutlet UIView *waterView;
@@ -29,18 +29,19 @@ const int HIGH_WATER_DIFF_PX = 284;
     return self;
 }
 
-- (void)beanManagerDidUpdateState:(PTDBeanManager *)beanManager{
-    if(self.beanManager.state == BeanManagerState_PoweredOn){
+- (void)beanManagerDidUpdateState:(PTDBeanManager *)beanManager
+{
+    if (self.beanManager.state == BeanManagerState_PoweredOn) {
         // if we're on, scan for advertisting beans
         [self.beanManager startScanningForBeans_error:nil];
-    }
-    else if (self.beanManager.state == BeanManagerState_PoweredOff) {
+    } else if (self.beanManager.state == BeanManagerState_PoweredOff) {
         // do something else
     }
 }
 
 // bean discovered
-- (void)BeanManager:(PTDBeanManager*)beanManager didDiscoverBean:(PTDBean*)bean error:(NSError*)error{
+- (void)BeanManager:(PTDBeanManager *)beanManager didDiscoverBean:(PTDBean *)bean error:(NSError *)error
+{
     if (error) {
         return;
     }
@@ -50,12 +51,14 @@ const int HIGH_WATER_DIFF_PX = 284;
     }
 }
 
-- (void)BeanManager:(PTDBeanManager *)beanManager didDisconnectBean:(PTDBean *)bean error:(NSError *)error{
+- (void)BeanManager:(PTDBeanManager *)beanManager didDisconnectBean:(PTDBean *)bean error:(NSError *)error
+{
     [self.connectedBean setLedColor:nil];
 }
 
 // bean connected
-- (void)BeanManager:(PTDBeanManager*)beanManager didConnectToBean:(PTDBean*)bean error:(NSError*)error{
+- (void)BeanManager:(PTDBeanManager *)beanManager didConnectToBean:(PTDBean *)bean error:(NSError *)error
+{
     if (error) {
         return;
     }
@@ -63,15 +66,16 @@ const int HIGH_WATER_DIFF_PX = 284;
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
 
-- (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data{
+- (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
+{
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"%@", stringData);
+    DDLogVerbose(@"Received data: %@", stringData);
 }
 
 - (void)viewDidLoad
 {
     [[self navigationItem] setHidesBackButton:YES];
-    
+
     self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self];
 }
 
