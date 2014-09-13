@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="927" y="78"/>
         </scene>
-        <!--Hi Today View Controller-->
+        <!--Hi Today View Controller - Hidrate-->
         <scene sceneID="su3-fs-Wjn">
             <objects>
                 <viewController id="ZdY-Nq-N9U" customClass="HiTodayViewController" sceneMemberID="viewController">
@@ -97,26 +97,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FD1-Rp-bor">
-                                <rect key="frame" x="117" y="302" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View History">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="U5y-1y-fQj" kind="push" id="K2G-Q1-pWi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EoF-Sg-bfp"/>
+                    <navigationItem key="navigationItem" title="Hidrate" id="EoF-Sg-bfp">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="Xkx-p2-Af9">
+                            <connections>
+                                <segue destination="U5y-1y-fQj" kind="push" id="1tm-nz-X04"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3G-uj-8Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1333" y="78"/>
         </scene>
-        <!--Hi History View Controller-->
+        <!--Hi History View Controller - History-->
         <scene sceneID="EtZ-tv-BC1">
             <objects>
                 <viewController id="U5y-1y-fQj" customClass="HiHistoryViewController" sceneMemberID="viewController">
@@ -134,23 +130,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-F4-sbZ">
-                                <rect key="frame" x="130" y="302" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RC2-sY-x8x" kind="unwind" unwindAction="unwindToToday:" id="AjK-lw-J4J"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IdH-tS-tyA"/>
+                    <navigationItem key="navigationItem" title="History" id="IdH-tS-tyA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bx-Aq-uti" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="RC2-sY-x8x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1743" y="78"/>
         </scene>
