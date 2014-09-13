@@ -193,7 +193,24 @@
                             <outlet property="delegate" destination="piZ-59-CsB" id="Ftz-tS-VDH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pJq-CB-sza"/>
+                    <navigationItem key="navigationItem" id="pJq-CB-sza">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Uhc-rP-cwg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ufL-zJ-4bQ">
+                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Fill Data">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fillData" destination="piZ-59-CsB" eventType="touchUpInside" id="ktF-h6-91F"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="fillData:" destination="piZ-59-CsB" id="cUf-r0-Xqz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="enterAge" destination="f6a-7r-ySp" id="k8Z-bg-8FX"/>
                         <outlet property="enterFeet" destination="0RR-ed-pX0" id="JHe-Jr-Cwo"/>

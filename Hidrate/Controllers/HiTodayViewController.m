@@ -9,7 +9,7 @@
 #import "HiTodayViewController.h"
 #import "PTDBeanManager.h"
 
-@interface HiTodayViewController () <PTDBeanManagerDelegate>
+@interface HiTodayViewController () <PTDBeanManagerDelegate, PTDBeanDelegate>
 @property (strong, nonatomic) PTDBeanManager *beanManager;
 @property (strong, nonatomic) PTDBean *connectedBean;
 @property (weak, nonatomic) IBOutlet UIView *waterView;
@@ -60,8 +60,12 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
     // do stuff with your bean
-    NSLog(@"HERE");
-    [bean setLedColor:nil];
+    [self.connectedBean sendSerialString:@"DATA PLZ"];
+}
+
+- (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data{
+    NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", stringData);
 }
 
 - (void)viewDidLoad

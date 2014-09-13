@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *enterWeight;
 @property (weak, nonatomic) IBOutlet UITextField *enterFeet;
 @property (weak, nonatomic) IBOutlet UITextField *enterInches;
+
 @end
 
 @implementation HiInitialSetupViewController
@@ -59,6 +60,13 @@
     }else{
         [self performSegueWithIdentifier:@"showToday" sender:self];
     }
+}
+
+- (IBAction)fillData {
+    self.enterAge.text = @"18";
+    self.enterWeight.text = @"135";
+    self.enterFeet.text = @"5";
+    self.enterInches.text = @"11";
 }
 
 @end
