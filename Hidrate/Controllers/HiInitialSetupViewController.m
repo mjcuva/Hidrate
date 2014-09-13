@@ -39,6 +39,22 @@
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
+    NSManagedObjectContext *context =
+    ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    
+    NSFetchRequest *fr = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    [fr setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fr error:NULL];
+    
+    if(fetchedObjects.count == 1){
+        User *u = fetchedObjects[0];
+        self.enterAge.text = [NSString stringWithFormat:@"%i", u.age];
+        self.enterFeet.text = [NSString stringWithFormat:@"%i", u.feet];
+        self.enterInches.text = [NSString stringWithFormat:@"%i", u.inches];
+        self.enterWeight.text = [NSString stringWithFormat:@"%.02f", u.weight];
+    }
+    
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification
@@ -87,6 +103,7 @@
         u.feet = feet;
         u.inches = inches;
         u.weight = weight;
+        u.age = age;
         if (self.genderControl.selectedSegmentIndex == 0) {
             u.gender = @"Male";
         } else {
@@ -97,14 +114,6 @@
 
         [self performSegueWithIdentifier:@"showToday" sender:self];
     }
-}
-
-- (IBAction)fillData
-{
-    self.enterAge.text = @"18";
-    self.enterWeight.text = @"135";
-    self.enterFeet.text = @"5";
-    self.enterInches.text = @"11";
 }
 
 - (IBAction)unwindToSetup:(UIStoryboardSegue *)segue
