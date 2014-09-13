@@ -60,8 +60,6 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
     // do stuff with your bean
-    NSLog(@"HERE");
-    [bean setLedColor:nil];
 }
 
 - (void)viewDidLoad

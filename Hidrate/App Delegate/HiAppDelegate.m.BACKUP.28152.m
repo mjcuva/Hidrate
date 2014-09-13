@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+<<<<<<< HEAD
     // Override point for customization after application launch
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:9.0/256 green:49.0/256 blue:64.0/256 alpha:1]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
@@ -20,10 +21,12 @@
     [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
     
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
+=======
     NSDictionary *navBarFont = @{ NSFontAttributeName : [UIFont fontWithName:@"Avenir-Heavy" size:20.0f] };
     NSDictionary *barButtonFont = @{ NSFontAttributeName : [UIFont fontWithName:@"Avenir-Medium" size:20.0f] };
     [[UINavigationBar appearance] setTitleTextAttributes:navBarFont];
     [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonFont forState:UIControlStateNormal];
+>>>>>>> 352cc67a91ec380335faa52a7edc220ac5d8f35a
     return YES;
 }
 
