@@ -10,8 +10,8 @@
 
 @interface HiTodayViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *WaterPercentLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *WavesImage;
-@property (weak, nonatomic) IBOutlet UISlider *DebugSlider;
+@property (weak, nonatomic) IBOutlet UILabel *waterPercentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *waterBottlesLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *wavesImage;
 
 @end

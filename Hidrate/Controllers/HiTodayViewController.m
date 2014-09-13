@@ -23,6 +23,11 @@
     return self;
 }
 
+- (IBAction)debugSliderChanged:(UISlider *)sender
+{
+    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", (int)[sender value]]];
+}
+
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
 {
 }
