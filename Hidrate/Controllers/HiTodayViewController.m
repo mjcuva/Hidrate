@@ -60,6 +60,8 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
     // do stuff with your bean
+    // Send twice due to bug
+    [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
 
