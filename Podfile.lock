@@ -1,0 +1,20 @@
+PODS:
+  - Bean-iOS-OSX-SDK (0.3.1)
+  - CocoaLumberjack (1.9.2):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
+    - CocoaLumberjack/Core
+  - InAppSettingsKit (2.1)
+
+DEPENDENCIES:
+  - Bean-iOS-OSX-SDK (~> 0.3.1)
+  - CocoaLumberjack (~> 1.9.2)
+  - InAppSettingsKit (~> 2.1)
+
+SPEC CHECKSUMS:
+  Bean-iOS-OSX-SDK: 6762118d4d22879ffa019af1c788daa4a9150a95
+  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
+  InAppSettingsKit: 853cdc9fcc76b87a4694f8d2b930e116463b5a29
+
+COCOAPODS: 0.33.1

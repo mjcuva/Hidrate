@@ -1,0 +1,1185 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0153FFFCD28946CDAE0436D8 /* PTDBleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E8781864823743E48023D758 /* PTDBleDevice.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		01CA19EC68264962BDE6DA8B /* NSData+CRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 99267A30EAEA45A9823D93DB /* NSData+CRC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		03AB2C8221DD4ADCA3D633F0 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D674871F6594811BE8541EB /* IASKSwitch.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		09869C135F234DFD9844F4FD /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B0362E5EBA6147EE88576500 /* DDLog.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		0DA660CEFADE4A05B3EEB5B9 /* PTDBeanRadioConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 70010D2423464A02B9718EE3 /* PTDBeanRadioConfig.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		128E4EE1AEE94823929FAC2C /* PTDBEAN_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B6B7E7B7947A3AA343B0F /* PTDBEAN_Helper.h */; };
+		1336DA6EC17C45ED8380E7AB /* IASKPSTextFieldSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F0ACBC7F78420FA22ACC99 /* IASKPSTextFieldSpecifierViewCell.h */; };
+		15A803C8D9CB49C6B27F1C25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F512203D3C2B4728A537196B /* Foundation.framework */; };
+		1782C5C6A61A489395CC8749 /* GattPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 89717928417D4CD6A7DF6476 /* GattPacket.h */; };
+		1804D90625A949EEAE6FABFE /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CF14CF45A2704679A1A8D4C2 /* IASKSpecifier.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		191130E309594B88AA3AE5C6 /* libPods-Hidrate-CocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB225E8D0DB4C6B8A64AC2D /* libPods-Hidrate-CocoaLumberjack.a */; };
+		199106870B9149C3A2BC6BA9 /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 078E3A175C7A4A7295916965 /* IASKSettingsReader.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		19D2C13FB9124E728475B910 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F5B4C3F260BC4473BFC8EB61 /* DDMultiFormatter.h */; };
+		1B4E5D1B19254D828AE0BB74 /* CBPeripheral+isConnected_Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E31E18265CB4F85B04CD987 /* CBPeripheral+isConnected_Universal.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		1C44BAB352F948E1A911B436 /* AppMessageTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C95181B5F37C400B912057DC /* AppMessageTypes.h */; };
+		1D24945AF90F4F899BDF928E /* PTDBeanManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EAFEE4761BB74A558F64B1ED /* PTDBeanManager.h */; };
+		24B3A5FAD2E64965867175A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F512203D3C2B4728A537196B /* Foundation.framework */; };
+		24DD939AE579447AA8B831DA /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4F306952514DEB99E9A110 /* IASKAppSettingsWebViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		265A6E0AF6BE4A8DBB2F70B3 /* libPods-Hidrate-InAppSettingsKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1631FE48FC1046969DB00C26 /* libPods-Hidrate-InAppSettingsKit.a */; };
+		270D22E5FBAB4DD7A91644E7 /* GattCharacteristicObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 56ED9AE3DE9A48BA8624E91A /* GattCharacteristicObserver.h */; };
+		2A95E03BC9154AF4A1913375 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA92676CA0456F906CF87B /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		2BF97E71EB2B4A048AFDA014 /* PTDBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D60E08560F04965B0DB71D4 /* PTDBean.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		2CAC15119C1B4DE5B0B2AEFA /* CBPeripheral+UniqueId.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8D59F80659471AA960368C /* CBPeripheral+UniqueId.h */; };
+		2E3FD05872394662BAE24F88 /* BleProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BC47800E5942D28A491D8B /* BleProfile.h */; };
+		2F2605E276F447A7990F3658 /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F151BF02D90C44A4AEF1C7CC /* IASKSettingsStore.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		319AD64CD5C44BB0B44F0F67 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD04EAA3D2C47078BBF8019 /* DDAbstractDatabaseLogger.h */; };
+		32F020A752B541869376C79E /* Pods-Hidrate-InAppSettingsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FEF179CD3D4D34B71213BF /* Pods-Hidrate-InAppSettingsKit-dummy.m */; };
+		342177396A4F49E7BDD41933 /* AppMessagingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A732BA57B04443B5AE372C /* AppMessagingLayer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		370BE4919D5B4B95B22649DA /* IASKPSTextFieldSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E509B51210D4559A38DE914 /* IASKPSTextFieldSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		37311BAE335744A5B3B11EF8 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E78FC3460C84C609C8F797C /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		379102E4CB6F4E8A9FE17FC8 /* GattSerialMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F08AFDC9074D5DBB7EFE1C /* GattSerialMessage.h */; };
+		383BAF79FCD448CA884CC77F /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF954CBADA44DF5804CB4B0 /* DDLog+LOGV.h */; };
+		3C78CBFCC6BC44BFBBA9EA99 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC19DF44EE74F0FBD8A0ABF /* MessageUI.framework */; };
+		3DDBA21C8BF245C58C23B178 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 238B7A82F60B42FE848D0168 /* DDLog.h */; };
+		3E8CABE30B8347A1B5F5C1B5 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA811ED8A1427995279CB4 /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		3E9AA8DDF8E84415A31B2CD5 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F494BC454F4B4902864AFF7B /* DDFileLogger.h */; };
+		41253B5D53B941A6A43121F8 /* Pods-Hidrate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D4A57344802ADF8B52C /* Pods-Hidrate-dummy.m */; };
+		42CF1E4DEAAF4089B113C3C7 /* IASKViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC7782C68B64412856277C1 /* IASKViewController.h */; };
+		48CCCAA12DFE4C69BBADA579 /* IASKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A0E788499F4020BB423FD7 /* IASKTextField.h */; };
+		4A650AF7BFCD410A8B6E4CF1 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD9394AF7D140D881A58848 /* DDTTYLogger.h */; };
+		51F6024A37C449C8B3C0DE34 /* IASKSettingsStoreUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = F86F6238D11B4DA5993943B1 /* IASKSettingsStoreUserDefaults.h */; };
+		576CE996402E417FB59CF259 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70327DC27E0C43FA813D5C07 /* IASKSpecifierValuesViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		5CFD073BACF04FD494952AAE /* IASKSpecifier.h in Headers */ = {isa = PBXBuildFile; fileRef = B15B6BC268FF4A31ACC16D3E /* IASKSpecifier.h */; };
+		5F7C5B1AD82C407E9E4B6CC4 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 93147BF16F2147DDA60522AA /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		612875F892D048DD911AC6F9 /* BEAN_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = BACB05B5008C42459F838FCC /* BEAN_Helper.h */; };
+		6343245D2FE44046B6E9C330 /* IASKPSTitleValueSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8097B0F6EF45BFAAE21841 /* IASKPSTitleValueSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		6360281E8B1841CD8F7EC8AD /* IASKPSSliderSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 765911E623EF464A82628B91 /* IASKPSSliderSpecifierViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		685D64FBB5A14955BE01EDF6 /* GattSerialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD85E1F60D344CBBBB6393E /* GattSerialProfile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		68E6016EED434ADA855722D4 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF5ABC51314B16B1475650 /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		69B0A2A0ABA040F7ADDAE045 /* CBPeripheral+isConnected_Universal.h in Headers */ = {isa = PBXBuildFile; fileRef = C88A1CB1537549D1A7D2A41E /* CBPeripheral+isConnected_Universal.h */; };
+		6B9CC8B2E9494AF5B694DB4F /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C9822B6E9BD5433986CDD506 /* DDDispatchQueueLogFormatter.h */; };
+		6C7BA4D9739D428EAD5708F9 /* AppMessagingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D43EED7B15744F01BC89C25F /* AppMessagingLayer.h */; };
+		6CC45A7C812947E68C06A7A2 /* GattTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D773E9F544486B95C8721D /* GattTransport.h */; };
+		6F050E7D2C9C4BD2ADC080F2 /* ProfileDelegate_Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D3547A1435415A8CEC0A6E /* ProfileDelegate_Protocol.h */; };
+		707D6A9CE76D41F198881E64 /* IASKSettingsStore.h in Headers */ = {isa = PBXBuildFile; fileRef = BD65F331931E4E95833135C8 /* IASKSettingsStore.h */; };
+		712A081DBC7240F990806F97 /* GattPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F2AED639A045BBB43C6BDA /* GattPacket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		73654313E7BE407CA319E50E /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 687F2A7795D94BDD8B2246A1 /* DDASLLogger.h */; };
+		751B6A95339C4301946C6E44 /* GattSerialTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = E48E7769265C459BBEFF0853 /* GattSerialTransport.h */; };
+		761F3B32616D41748C681577 /* PTDBeanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 899621FFE82B4F458CD4661B /* PTDBeanManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		764FA698F01440EAA192212D /* OadProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A5270B7624844AEBBDF5587A /* OadProfile.h */; };
+		7A70D25688944E66BBC25927 /* BatteryProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F190FD19A7B43C499D1A788 /* BatteryProfile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		7EE877CC69294C6490D5432E /* DDAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 95C4465843044861B3D13663 /* DDAssert.h */; };
+		8221A88D4975450B824DAC2D /* PTDBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 678771339E114CDEB67632F5 /* PTDBean.h */; };
+		82D924E0140F41A6ABB3F241 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283CF1705384FACA4F09B04 /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		85250FB76C2F4DC881E3C187 /* IASKSettingsReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB8E1C27A434595953ECB35 /* IASKSettingsReader.h */; };
+		89761198C09C4572A950844E /* oad.h in Headers */ = {isa = PBXBuildFile; fileRef = 4283D8F1039140669D5CC578 /* oad.h */; };
+		8C10E37756914061BB4E184E /* CBPeripheral+UniqueId.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7292F65F3749F0BCC0C10D /* CBPeripheral+UniqueId.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		8EEC365EAC854D479909F788 /* IASKSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = DEEDC27546E1463883180B87 /* IASKSwitch.h */; };
+		9610ED1757254DF79E936BCB /* IASKSpecifierValuesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF6053FA960C44FDBB9FB6E8 /* IASKSpecifierValuesViewController.h */; };
+		984B4DB6138A455E9D9E6EC2 /* Profile_Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B21DC297AF2D426499427B83 /* Profile_Protocol.h */; };
+		9CF1AEF6990447C9A3CF7260 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 06CD922873F04658B1EC44B6 /* DDASLLogCapture.h */; };
+		9E57DD5079EC4E52827D7E04 /* BatteryProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD2E8E98CE64262AB969F91 /* BatteryProfile.h */; };
+		9EC9AE06786F45FF8CC3C4AA /* BleProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6975D094DE4F1D897B48F5 /* BleProfile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		9FEA593CEEFA4C01A18BB308 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0E0BE45ECD49A081255463 /* DDContextFilterLogFormatter.h */; };
+		A02A408ED67E40D083E10790 /* IASKPSTitleValueSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBA9735BAE14D12B003A028 /* IASKPSTitleValueSpecifierViewCell.h */; };
+		A272C0C23E6B4FF0AC05D770 /* GattSerialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F8C4EA7F043D8B746754E /* GattSerialMessage.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		A2BA86751A784B91883CC6EF /* GattSerialTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AF048D942A41F3A8BC39DF /* GattSerialTransport.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		A4F9B0B40E2049F8AA918C5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F512203D3C2B4728A537196B /* Foundation.framework */; };
+		A85EA0D877624EE1AE4399B2 /* GattSerialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 541E54DD19A644499ED4A5C2 /* GattSerialProfile.h */; };
+		B21F565E1E9D46F9813BA7D3 /* IASKAppSettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D3CDA7ADFE4C209BFD1939 /* IASKAppSettingsViewController.h */; };
+		B289CF4FA3B447C18B8973C1 /* PTDBleDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FD1B58AE4B46AAB8ED3725 /* PTDBleDevice.h */; };
+		B4E2FEC9530044119E583954 /* BEAN_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6ED782C014477A5D1F566 /* BEAN_Helper.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		B510564A59324C1389089FA9 /* IASKSettingsStoreFile.h in Headers */ = {isa = PBXBuildFile; fileRef = A92BA64CF3D94F75B425C660 /* IASKSettingsStoreFile.h */; };
+		B5BD5E2483E147BB807447A4 /* GattTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 823A6DED42B54627A2A8103B /* GattTransport.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		C4EAD35337FA401AAFCFAB93 /* GattCharacteristicHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 62386AEE6DE3443BBA5E7228 /* GattCharacteristicHandler.h */; };
+		C4F1D6C7A5174745842BC762 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1313984E00B44876887D127A /* IASKTextField.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		C5D7BF5149894A48AEFFF0ED /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE39C3F24104F29AF00F018 /* IASKAppSettingsViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		C6B5BEAF1CE4429A8E50629E /* IASKSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AFC07E53224855AF3D37FD /* IASKSlider.h */; };
+		C7798CE63460438AB7D3F154 /* PTDBeanRadioConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72D196B4B14CDDA62C9419 /* PTDBeanRadioConfig.h */; };
+		D162CA5B5FA04A159573E5AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F512203D3C2B4728A537196B /* Foundation.framework */; };
+		D2AC056C4BBB4B60BDC1C67F /* PTDBean+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = F95DFDC6C3AF4CF184E6FA36 /* PTDBean+Protected.h */; };
+		D2F9CF2035EC4700822D381A /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CE439BE05548C9B025A754 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		D3EE7E0952C3437CA24A852D /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B96E8950A44D38B0A53491 /* IASKSettingsStoreFile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		D5635BACE61843DABEFC4D93 /* libPods-Hidrate-Bean-iOS-OSX-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFD0CC916AD444192AB58CA /* libPods-Hidrate-Bean-iOS-OSX-SDK.a */; };
+		D57607F9245F485BB7A6F19B /* Pods-Hidrate-CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D98997BC96F2409596A1A77B /* Pods-Hidrate-CocoaLumberjack-dummy.m */; };
+		D601CB3DAD1A405386C7B09D /* OadProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72BBF083CB49F7B469291D /* OadProfile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		D8AA044A1A2C49BB85DF37EC /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A2C8E7DC334E2EA0D51D92 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		D8B9D9C7C3264FD788FB38CC /* DevInfoProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7546D49A534A1098AA38BC /* DevInfoProfile.h */; };
+		DAFBBA3DC44043FEB0A8C78D /* DevInfoProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = C0686CCC20864615902579FB /* DevInfoProfile.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		DC41B2E511BA4D40ADEAFEBA /* PTDBeanManager+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 28B60529B2F14713BEAF92F6 /* PTDBeanManager+Protected.h */; };
+		E37880EA6CF94BA8AC646F5C /* GattSerialMessageRxAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 386948AFA7C745189468A9CF /* GattSerialMessageRxAssembler.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		E43794003AC345A6861281E0 /* AppMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C90821A97E5488CAC3AD182 /* AppMessages.h */; };
+		E4E35AEFB122451EAA3C7954 /* BEAN_Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = C8808D164E314C0781D7BD5E /* BEAN_Globals.h */; };
+		EE64F226062C46C7946E9703 /* GattSerialMessageRxAssembler.h in Headers */ = {isa = PBXBuildFile; fileRef = A42B4A6AC5A147F3883753C5 /* GattSerialMessageRxAssembler.h */; };
+		EEF7352C5E214F1DABB1FE4D /* Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 951B187409704099B18D3DCA /* Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m */; };
+		EFBC7CF017C84339A0E5D834 /* IASKSettingsStoreUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189C5BF4F6473381D654C6 /* IASKSettingsStoreUserDefaults.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		F0E6E3A2583C4380AAB92D27 /* IASKAppSettingsWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D01677422348E2B5584981 /* IASKAppSettingsWebViewController.h */; };
+		F612B347BE3740588F35FC1E /* NSData+CRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 33E6AC8A72094A2A97D97617 /* NSData+CRC.h */; };
+		F87A7DA1540F450CA04F73AF /* IASKPSSliderSpecifierViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F5F304313C14D04A387C750 /* IASKPSSliderSpecifierViewCell.h */; };
+		FA813A560C13460DA9055E54 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF42E3B816D040E5B0FFCAF0 /* CoreBluetooth.framework */; };
+		FDEA4C8E9B6849FBB897AEC0 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F070D50B4C754A6D96FF8A65 /* IASKSlider.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker"; }; };
+		FF16730122F846CC98A63823 /* PTDBEAN_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D60CEB414A3C4E5395C33656 /* PTDBEAN_Helper.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		979A697641014B3FA69043B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00893EF857642BA915698F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7727F68E54614FA0934C14CB;
+			remoteInfo = "Pods-Hidrate-Bean-iOS-OSX-SDK";
+		};
+		AA45049CC0E049B69D5D94F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00893EF857642BA915698F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D7B3CF61CC3425591B248C4;
+			remoteInfo = "Pods-Hidrate-CocoaLumberjack";
+		};
+		AB8E876E0C9A48A597211AC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00893EF857642BA915698F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94B7BE6BB4FA4AF2AB9CF2A5;
+			remoteInfo = "Pods-Hidrate-InAppSettingsKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00FEF179CD3D4D34B71213BF /* Pods-Hidrate-InAppSettingsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hidrate-InAppSettingsKit-dummy.m"; sourceTree = "<group>"; };
+		0283CF1705384FACA4F09B04 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Lumberjack/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		02F08AFDC9074D5DBB7EFE1C /* GattSerialMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattSerialMessage.h; path = "source/Profiles/Gatt Serial/Transport/GattSerialMessage.h"; sourceTree = "<group>"; };
+		03A5B2C51A9F4AEB88780825 /* Pods-Hidrate-CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-CocoaLumberjack.xcconfig"; sourceTree = "<group>"; };
+		04F2AED639A045BBB43C6BDA /* GattPacket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattPacket.m; path = "source/Profiles/Gatt Serial/Transport/GattPacket.m"; sourceTree = "<group>"; };
+		05FC47CDE30D4BC3895FECE6 /* Pods-Hidrate-Bean-iOS-OSX-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hidrate-Bean-iOS-OSX-SDK-prefix.pch"; sourceTree = "<group>"; };
+		06CD922873F04658B1EC44B6 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Lumberjack/DDASLLogCapture.h; sourceTree = "<group>"; };
+		078E3A175C7A4A7295916965 /* IASKSettingsReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsReader.m; path = InAppSettingsKit/Models/IASKSettingsReader.m; sourceTree = "<group>"; };
+		0E7546D49A534A1098AA38BC /* DevInfoProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DevInfoProfile.h; path = "source/Profiles/Device Info/DevInfoProfile.h"; sourceTree = "<group>"; };
+		0F8097B0F6EF45BFAAE21841 /* IASKPSTitleValueSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSTitleValueSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSTitleValueSpecifierViewCell.m; sourceTree = "<group>"; };
+		1313984E00B44876887D127A /* IASKTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKTextField.m; path = InAppSettingsKit/Views/IASKTextField.m; sourceTree = "<group>"; };
+		1455DC734B084F2189628120 /* Pods-Hidrate-Bean-iOS-OSX-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-Bean-iOS-OSX-SDK.xcconfig"; sourceTree = "<group>"; };
+		1631FE48FC1046969DB00C26 /* libPods-Hidrate-InAppSettingsKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate-InAppSettingsKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C026C42CC1342FDB2B07117 /* Pods-Hidrate-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Hidrate-resources.sh"; sourceTree = "<group>"; };
+		1D72D196B4B14CDDA62C9419 /* PTDBeanRadioConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTDBeanRadioConfig.h; path = source/Public/PTDBeanRadioConfig.h; sourceTree = "<group>"; };
+		1E0E0BE45ECD49A081255463 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Lumberjack/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		20E02D4A57344802ADF8B52C /* Pods-Hidrate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hidrate-dummy.m"; sourceTree = "<group>"; };
+		238B7A82F60B42FE848D0168 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Lumberjack/DDLog.h; sourceTree = "<group>"; };
+		26CE439BE05548C9B025A754 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Lumberjack/DDASLLogCapture.m; sourceTree = "<group>"; };
+		273195E8B09E433F8BD5F3EF /* Pods-Hidrate-CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hidrate-CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		28B60529B2F14713BEAF92F6 /* PTDBeanManager+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PTDBeanManager+Protected.h"; path = "source/PTDBeanManager+Protected.h"; sourceTree = "<group>"; };
+		2CD6ED782C014477A5D1F566 /* BEAN_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEAN_Helper.m; path = source/Helper/BEAN_Helper.m; sourceTree = "<group>"; };
+		2FD04EAA3D2C47078BBF8019 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Lumberjack/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		33AFC07E53224855AF3D37FD /* IASKSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSlider.h; path = InAppSettingsKit/Views/IASKSlider.h; sourceTree = "<group>"; };
+		33E6AC8A72094A2A97D97617 /* NSData+CRC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+CRC.h"; path = "source/Categories/NSData+CRC.h"; sourceTree = "<group>"; };
+		361FDF889A49445AAF5DDF11 /* Pods-Hidrate-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Hidrate-acknowledgements.markdown"; sourceTree = "<group>"; };
+		386948AFA7C745189468A9CF /* GattSerialMessageRxAssembler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattSerialMessageRxAssembler.m; path = "source/Profiles/Gatt Serial/Transport/GattSerialMessageRxAssembler.m"; sourceTree = "<group>"; };
+		3E509B51210D4559A38DE914 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSTextFieldSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
+		3EFD0CC916AD444192AB58CA /* libPods-Hidrate-Bean-iOS-OSX-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate-Bean-iOS-OSX-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F190FD19A7B43C499D1A788 /* BatteryProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BatteryProfile.m; path = source/Profiles/Battery/BatteryProfile.m; sourceTree = "<group>"; };
+		423D1E7372304C9688401A88 /* Pods-Hidrate-InAppSettingsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-InAppSettingsKit.xcconfig"; sourceTree = "<group>"; };
+		4283D8F1039140669D5CC578 /* oad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = oad.h; path = source/Profiles/OAD/oad.h; sourceTree = "<group>"; };
+		4BC19DF44EE74F0FBD8A0ABF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		4CB8E1C27A434595953ECB35 /* IASKSettingsReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsReader.h; path = InAppSettingsKit/Models/IASKSettingsReader.h; sourceTree = "<group>"; };
+		4CE39C3F24104F29AF00F018 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		4E31E18265CB4F85B04CD987 /* CBPeripheral+isConnected_Universal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CBPeripheral+isConnected_Universal.m"; path = "source/Categories/CBPeripheral+isConnected_Universal.m"; sourceTree = "<group>"; };
+		541E54DD19A644499ED4A5C2 /* GattSerialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattSerialProfile.h; path = "source/Profiles/Gatt Serial/GattSerialProfile.h"; sourceTree = "<group>"; };
+		56ED9AE3DE9A48BA8624E91A /* GattCharacteristicObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattCharacteristicObserver.h; path = "source/Profiles/Gatt Serial/Transport/GattCharacteristicObserver.h"; sourceTree = "<group>"; };
+		58DA21094AED4E3F9A9645E4 /* Pods-Hidrate-CocoaLumberjack-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-CocoaLumberjack-Private.xcconfig"; sourceTree = "<group>"; };
+		59B96E8950A44D38B0A53491 /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreFile.m; path = InAppSettingsKit/Models/IASKSettingsStoreFile.m; sourceTree = "<group>"; };
+		62386AEE6DE3443BBA5E7228 /* GattCharacteristicHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattCharacteristicHandler.h; path = "source/Profiles/Gatt Serial/Transport/GattCharacteristicHandler.h"; sourceTree = "<group>"; };
+		63EF1F5A7C7A49C8B3E72021 /* libPods-Hidrate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64189C5BF4F6473381D654C6 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStoreUserDefaults.m; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
+		6517DF7CCB0B4C809E96DA79 /* Pods-Hidrate-InAppSettingsKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-InAppSettingsKit-Private.xcconfig"; sourceTree = "<group>"; };
+		65AA811ED8A1427995279CB4 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Lumberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		678771339E114CDEB67632F5 /* PTDBean.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTDBean.h; path = source/Public/PTDBean.h; sourceTree = "<group>"; };
+		687F2A7795D94BDD8B2246A1 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Lumberjack/DDASLLogger.h; sourceTree = "<group>"; };
+		6E78FC3460C84C609C8F797C /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Lumberjack/DDTTYLogger.m; sourceTree = "<group>"; };
+		6F5F304313C14D04A387C750 /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSSliderSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
+		70010D2423464A02B9718EE3 /* PTDBeanRadioConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTDBeanRadioConfig.m; path = source/PTDBeanRadioConfig.m; sourceTree = "<group>"; };
+		70327DC27E0C43FA813D5C07 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifierValuesViewController.m; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
+		71F0F6C3720641C9AC3B5064 /* Pods-Hidrate-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Hidrate-acknowledgements.plist"; sourceTree = "<group>"; };
+		740D2C1A98B94BFB9318773A /* Pods-Hidrate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate.xcconfig"; sourceTree = "<group>"; };
+		74A0E788499F4020BB423FD7 /* IASKTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKTextField.h; path = InAppSettingsKit/Views/IASKTextField.h; sourceTree = "<group>"; };
+		74D3CDA7ADFE4C209BFD1939 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		765911E623EF464A82628B91 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKPSSliderSpecifierViewCell.m; path = InAppSettingsKit/Views/IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
+		76A1D4EA62BF42689F998AE2 /* Pods-Hidrate-InAppSettingsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hidrate-InAppSettingsKit-prefix.pch"; sourceTree = "<group>"; };
+		7C90821A97E5488CAC3AD182 /* AppMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppMessages.h; path = "App Message Definitions/AppMessages.h"; sourceTree = "<group>"; };
+		7DBA92676CA0456F906CF87B /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Lumberjack/DDFileLogger.m; sourceTree = "<group>"; };
+		823A6DED42B54627A2A8103B /* GattTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattTransport.m; path = "source/Profiles/Gatt Serial/Transport/GattTransport.m"; sourceTree = "<group>"; };
+		860275FE2539426DB04BF099 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		89717928417D4CD6A7DF6476 /* GattPacket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattPacket.h; path = "source/Profiles/Gatt Serial/Transport/GattPacket.h"; sourceTree = "<group>"; };
+		899621FFE82B4F458CD4661B /* PTDBeanManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTDBeanManager.m; path = source/PTDBeanManager.m; sourceTree = "<group>"; };
+		8BD9394AF7D140D881A58848 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Lumberjack/DDTTYLogger.h; sourceTree = "<group>"; };
+		8D60E08560F04965B0DB71D4 /* PTDBean.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTDBean.m; path = source/PTDBean.m; sourceTree = "<group>"; };
+		93147BF16F2147DDA60522AA /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Lumberjack/DDASLLogger.m; sourceTree = "<group>"; };
+		951B187409704099B18D3DCA /* Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m"; sourceTree = "<group>"; };
+		95C4465843044861B3D13663 /* DDAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssert.h; path = Lumberjack/DDAssert.h; sourceTree = "<group>"; };
+		99267A30EAEA45A9823D93DB /* NSData+CRC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+CRC.m"; path = "source/Categories/NSData+CRC.m"; sourceTree = "<group>"; };
+		9D674871F6594811BE8541EB /* IASKSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSwitch.m; path = InAppSettingsKit/Views/IASKSwitch.m; sourceTree = "<group>"; };
+		A1BC47800E5942D28A491D8B /* BleProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BleProfile.h; path = source/Profiles/BleProfile.h; sourceTree = "<group>"; };
+		A42B4A6AC5A147F3883753C5 /* GattSerialMessageRxAssembler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattSerialMessageRxAssembler.h; path = "source/Profiles/Gatt Serial/Transport/GattSerialMessageRxAssembler.h"; sourceTree = "<group>"; };
+		A5270B7624844AEBBDF5587A /* OadProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OadProfile.h; path = source/Profiles/OAD/OadProfile.h; sourceTree = "<group>"; };
+		A5D3547A1435415A8CEC0A6E /* ProfileDelegate_Protocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProfileDelegate_Protocol.h; path = source/Profiles/ProfileDelegate_Protocol.h; sourceTree = "<group>"; };
+		A60B6B7E7B7947A3AA343B0F /* PTDBEAN_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTDBEAN_Helper.h; path = source/Helper/PTDBEAN_Helper.h; sourceTree = "<group>"; };
+		A92BA64CF3D94F75B425C660 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreFile.h; path = InAppSettingsKit/Models/IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		AB8D59F80659471AA960368C /* CBPeripheral+UniqueId.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CBPeripheral+UniqueId.h"; path = "source/Categories/CBPeripheral+UniqueId.h"; sourceTree = "<group>"; };
+		ABD2E8E98CE64262AB969F91 /* BatteryProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BatteryProfile.h; path = source/Profiles/Battery/BatteryProfile.h; sourceTree = "<group>"; };
+		AEF954CBADA44DF5804CB4B0 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Lumberjack/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		AFD85E1F60D344CBBBB6393E /* GattSerialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattSerialProfile.m; path = "source/Profiles/Gatt Serial/GattSerialProfile.m"; sourceTree = "<group>"; };
+		B0362E5EBA6147EE88576500 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Lumberjack/DDLog.m; sourceTree = "<group>"; };
+		B15B6BC268FF4A31ACC16D3E /* IASKSpecifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifier.h; path = InAppSettingsKit/Models/IASKSpecifier.h; sourceTree = "<group>"; };
+		B21DC297AF2D426499427B83 /* Profile_Protocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Profile_Protocol.h; path = source/Profiles/Profile_Protocol.h; sourceTree = "<group>"; };
+		B99F8C4EA7F043D8B746754E /* GattSerialMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattSerialMessage.m; path = "source/Profiles/Gatt Serial/Transport/GattSerialMessage.m"; sourceTree = "<group>"; };
+		B9F0ACBC7F78420FA22ACC99 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSTextFieldSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
+		BACB05B5008C42459F838FCC /* BEAN_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEAN_Helper.h; path = source/Helper/BEAN_Helper.h; sourceTree = "<group>"; };
+		BD65F331931E4E95833135C8 /* IASKSettingsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStore.h; path = InAppSettingsKit/Models/IASKSettingsStore.h; sourceTree = "<group>"; };
+		BDBA9735BAE14D12B003A028 /* IASKPSTitleValueSpecifierViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKPSTitleValueSpecifierViewCell.h; path = InAppSettingsKit/Views/IASKPSTitleValueSpecifierViewCell.h; sourceTree = "<group>"; };
+		C0686CCC20864615902579FB /* DevInfoProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DevInfoProfile.m; path = "source/Profiles/Device Info/DevInfoProfile.m"; sourceTree = "<group>"; };
+		C8808D164E314C0781D7BD5E /* BEAN_Globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEAN_Globals.h; path = source/BEAN_Globals.h; sourceTree = "<group>"; };
+		C88A1CB1537549D1A7D2A41E /* CBPeripheral+isConnected_Universal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CBPeripheral+isConnected_Universal.h"; path = "source/Categories/CBPeripheral+isConnected_Universal.h"; sourceTree = "<group>"; };
+		C95181B5F37C400B912057DC /* AppMessageTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppMessageTypes.h; path = "App Message Definitions/AppMessageTypes.h"; sourceTree = "<group>"; };
+		C9822B6E9BD5433986CDD506 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Lumberjack/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		C9AF5ABC51314B16B1475650 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Lumberjack/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
+		C9D773E9F544486B95C8721D /* GattTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattTransport.h; path = "source/Profiles/Gatt Serial/Transport/GattTransport.h"; sourceTree = "<group>"; };
+		CB6975D094DE4F1D897B48F5 /* BleProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BleProfile.m; path = source/Profiles/BleProfile.m; sourceTree = "<group>"; };
+		CF14CF45A2704679A1A8D4C2 /* IASKSpecifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSpecifier.m; path = InAppSettingsKit/Models/IASKSpecifier.m; sourceTree = "<group>"; };
+		CF6053FA960C44FDBB9FB6E8 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSpecifierValuesViewController.h; path = InAppSettingsKit/Controllers/IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
+		CF72BBF083CB49F7B469291D /* OadProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OadProfile.m; path = source/Profiles/OAD/OadProfile.m; sourceTree = "<group>"; };
+		D1A2C8E7DC334E2EA0D51D92 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Lumberjack/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		D23C843030F94FCB838DC770 /* Pods-Hidrate-Bean-iOS-OSX-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hidrate-Bean-iOS-OSX-SDK-Private.xcconfig"; sourceTree = "<group>"; };
+		D43EED7B15744F01BC89C25F /* AppMessagingLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppMessagingLayer.h; path = source/AppMessages/AppMessagingLayer.h; sourceTree = "<group>"; };
+		D60CEB414A3C4E5395C33656 /* PTDBEAN_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTDBEAN_Helper.m; path = source/Helper/PTDBEAN_Helper.m; sourceTree = "<group>"; };
+		D98997BC96F2409596A1A77B /* Pods-Hidrate-CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hidrate-CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		D9D01677422348E2B5584981 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKAppSettingsWebViewController.h; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
+		DC4F306952514DEB99E9A110 /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKAppSettingsWebViewController.m; path = InAppSettingsKit/Controllers/IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
+		DD7292F65F3749F0BCC0C10D /* CBPeripheral+UniqueId.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CBPeripheral+UniqueId.m"; path = "source/Categories/CBPeripheral+UniqueId.m"; sourceTree = "<group>"; };
+		DEEDC27546E1463883180B87 /* IASKSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSwitch.h; path = InAppSettingsKit/Views/IASKSwitch.h; sourceTree = "<group>"; };
+		E48E7769265C459BBEFF0853 /* GattSerialTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GattSerialTransport.h; path = "source/Profiles/Gatt Serial/Transport/GattSerialTransport.h"; sourceTree = "<group>"; };
+		E8781864823743E48023D758 /* PTDBleDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTDBleDevice.m; path = source/Profiles/PTDBleDevice.m; sourceTree = "<group>"; };
+		EAFEE4761BB74A558F64B1ED /* PTDBeanManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTDBeanManager.h; path = source/Public/PTDBeanManager.h; sourceTree = "<group>"; };
+		ECC7782C68B64412856277C1 /* IASKViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKViewController.h; path = InAppSettingsKit/Controllers/IASKViewController.h; sourceTree = "<group>"; };
+		F070D50B4C754A6D96FF8A65 /* IASKSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSlider.m; path = InAppSettingsKit/Views/IASKSlider.m; sourceTree = "<group>"; };
+		F151BF02D90C44A4AEF1C7CC /* IASKSettingsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IASKSettingsStore.m; path = InAppSettingsKit/Models/IASKSettingsStore.m; sourceTree = "<group>"; };
+		F1AF048D942A41F3A8BC39DF /* GattSerialTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GattSerialTransport.m; path = "source/Profiles/Gatt Serial/Transport/GattSerialTransport.m"; sourceTree = "<group>"; };
+		F31ECC4E5AF94D6AB9A19CDE /* Pods-Hidrate-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hidrate-environment.h"; sourceTree = "<group>"; };
+		F494BC454F4B4902864AFF7B /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Lumberjack/DDFileLogger.h; sourceTree = "<group>"; };
+		F512203D3C2B4728A537196B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F5B4C3F260BC4473BFC8EB61 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Lumberjack/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
+		F86F6238D11B4DA5993943B1 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IASKSettingsStoreUserDefaults.h; path = InAppSettingsKit/Models/IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
+		F8FD1B58AE4B46AAB8ED3725 /* PTDBleDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTDBleDevice.h; path = source/Public/PTDBleDevice.h; sourceTree = "<group>"; };
+		F95DFDC6C3AF4CF184E6FA36 /* PTDBean+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PTDBean+Protected.h"; path = "source/PTDBean+Protected.h"; sourceTree = "<group>"; };
+		F9A732BA57B04443B5AE372C /* AppMessagingLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppMessagingLayer.m; path = source/AppMessages/AppMessagingLayer.m; sourceTree = "<group>"; };
+		FEB225E8D0DB4C6B8A64AC2D /* libPods-Hidrate-CocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate-CocoaLumberjack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF42E3B816D040E5B0FFCAF0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A1EE4A6F9704A93940583AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D162CA5B5FA04A159573E5AF /* Foundation.framework in Frameworks */,
+				D5635BACE61843DABEFC4D93 /* libPods-Hidrate-Bean-iOS-OSX-SDK.a in Frameworks */,
+				191130E309594B88AA3AE5C6 /* libPods-Hidrate-CocoaLumberjack.a in Frameworks */,
+				265A6E0AF6BE4A8DBB2F70B3 /* libPods-Hidrate-InAppSettingsKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51336D8AC8C94DBB81E0C20D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA813A560C13460DA9055E54 /* CoreBluetooth.framework in Frameworks */,
+				15A803C8D9CB49C6B27F1C25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		559640FC7FCE44CBA4567F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F9B0B40E2049F8AA918C5A /* Foundation.framework in Frameworks */,
+				3C78CBFCC6BC44BFBBA9EA99 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632E0B523E704B85A4EC2B45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B3A5FAD2E64965867175A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05DB6FDDA30A484A904B15BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				202E9E80DCA8487B83DD4B65 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		202E9E80DCA8487B83DD4B65 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF42E3B816D040E5B0FFCAF0 /* CoreBluetooth.framework */,
+				F512203D3C2B4728A537196B /* Foundation.framework */,
+				4BC19DF44EE74F0FBD8A0ABF /* MessageUI.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		22434CD26A23495AB9A478CE /* Pods-Hidrate */ = {
+			isa = PBXGroup;
+			children = (
+				740D2C1A98B94BFB9318773A /* Pods-Hidrate.xcconfig */,
+				361FDF889A49445AAF5DDF11 /* Pods-Hidrate-acknowledgements.markdown */,
+				71F0F6C3720641C9AC3B5064 /* Pods-Hidrate-acknowledgements.plist */,
+				20E02D4A57344802ADF8B52C /* Pods-Hidrate-dummy.m */,
+				F31ECC4E5AF94D6AB9A19CDE /* Pods-Hidrate-environment.h */,
+				1C026C42CC1342FDB2B07117 /* Pods-Hidrate-resources.sh */,
+			);
+			name = "Pods-Hidrate";
+			sourceTree = "<group>";
+		};
+		2DBC4DA804DE43EA81203922 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E0E0BE45ECD49A081255463 /* DDContextFilterLogFormatter.h */,
+				D1A2C8E7DC334E2EA0D51D92 /* DDContextFilterLogFormatter.m */,
+				C9822B6E9BD5433986CDD506 /* DDDispatchQueueLogFormatter.h */,
+				0283CF1705384FACA4F09B04 /* DDDispatchQueueLogFormatter.m */,
+				F5B4C3F260BC4473BFC8EB61 /* DDMultiFormatter.h */,
+				C9AF5ABC51314B16B1475650 /* DDMultiFormatter.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		36D231AE11A046DE94E79E85 = {
+			isa = PBXGroup;
+			children = (
+				860275FE2539426DB04BF099 /* Podfile */,
+				05DB6FDDA30A484A904B15BE /* Frameworks */,
+				70B5D50534B74D39B742002D /* Pods */,
+				663AA235B51A4BC3892C802C /* Products */,
+				AF60E329ACE641F78559F9D0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		663AA235B51A4BC3892C802C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63EF1F5A7C7A49C8B3E72021 /* libPods-Hidrate.a */,
+				3EFD0CC916AD444192AB58CA /* libPods-Hidrate-Bean-iOS-OSX-SDK.a */,
+				FEB225E8D0DB4C6B8A64AC2D /* libPods-Hidrate-CocoaLumberjack.a */,
+				1631FE48FC1046969DB00C26 /* libPods-Hidrate-InAppSettingsKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70B5D50534B74D39B742002D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				749AEE6D03204B4681169537 /* Bean-iOS-OSX-SDK */,
+				F3A158388A2B49FD83793AAB /* CocoaLumberjack */,
+				F092FBF6905E48CEBA91650F /* InAppSettingsKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		749AEE6D03204B4681169537 /* Bean-iOS-OSX-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C95181B5F37C400B912057DC /* AppMessageTypes.h */,
+				7C90821A97E5488CAC3AD182 /* AppMessages.h */,
+				D43EED7B15744F01BC89C25F /* AppMessagingLayer.h */,
+				F9A732BA57B04443B5AE372C /* AppMessagingLayer.m */,
+				C8808D164E314C0781D7BD5E /* BEAN_Globals.h */,
+				BACB05B5008C42459F838FCC /* BEAN_Helper.h */,
+				2CD6ED782C014477A5D1F566 /* BEAN_Helper.m */,
+				ABD2E8E98CE64262AB969F91 /* BatteryProfile.h */,
+				3F190FD19A7B43C499D1A788 /* BatteryProfile.m */,
+				A1BC47800E5942D28A491D8B /* BleProfile.h */,
+				CB6975D094DE4F1D897B48F5 /* BleProfile.m */,
+				AB8D59F80659471AA960368C /* CBPeripheral+UniqueId.h */,
+				DD7292F65F3749F0BCC0C10D /* CBPeripheral+UniqueId.m */,
+				C88A1CB1537549D1A7D2A41E /* CBPeripheral+isConnected_Universal.h */,
+				4E31E18265CB4F85B04CD987 /* CBPeripheral+isConnected_Universal.m */,
+				0E7546D49A534A1098AA38BC /* DevInfoProfile.h */,
+				C0686CCC20864615902579FB /* DevInfoProfile.m */,
+				62386AEE6DE3443BBA5E7228 /* GattCharacteristicHandler.h */,
+				56ED9AE3DE9A48BA8624E91A /* GattCharacteristicObserver.h */,
+				89717928417D4CD6A7DF6476 /* GattPacket.h */,
+				04F2AED639A045BBB43C6BDA /* GattPacket.m */,
+				02F08AFDC9074D5DBB7EFE1C /* GattSerialMessage.h */,
+				B99F8C4EA7F043D8B746754E /* GattSerialMessage.m */,
+				A42B4A6AC5A147F3883753C5 /* GattSerialMessageRxAssembler.h */,
+				386948AFA7C745189468A9CF /* GattSerialMessageRxAssembler.m */,
+				541E54DD19A644499ED4A5C2 /* GattSerialProfile.h */,
+				AFD85E1F60D344CBBBB6393E /* GattSerialProfile.m */,
+				E48E7769265C459BBEFF0853 /* GattSerialTransport.h */,
+				F1AF048D942A41F3A8BC39DF /* GattSerialTransport.m */,
+				C9D773E9F544486B95C8721D /* GattTransport.h */,
+				823A6DED42B54627A2A8103B /* GattTransport.m */,
+				33E6AC8A72094A2A97D97617 /* NSData+CRC.h */,
+				99267A30EAEA45A9823D93DB /* NSData+CRC.m */,
+				A5270B7624844AEBBDF5587A /* OadProfile.h */,
+				CF72BBF083CB49F7B469291D /* OadProfile.m */,
+				A60B6B7E7B7947A3AA343B0F /* PTDBEAN_Helper.h */,
+				D60CEB414A3C4E5395C33656 /* PTDBEAN_Helper.m */,
+				678771339E114CDEB67632F5 /* PTDBean.h */,
+				8D60E08560F04965B0DB71D4 /* PTDBean.m */,
+				F95DFDC6C3AF4CF184E6FA36 /* PTDBean+Protected.h */,
+				EAFEE4761BB74A558F64B1ED /* PTDBeanManager.h */,
+				899621FFE82B4F458CD4661B /* PTDBeanManager.m */,
+				28B60529B2F14713BEAF92F6 /* PTDBeanManager+Protected.h */,
+				1D72D196B4B14CDDA62C9419 /* PTDBeanRadioConfig.h */,
+				70010D2423464A02B9718EE3 /* PTDBeanRadioConfig.m */,
+				F8FD1B58AE4B46AAB8ED3725 /* PTDBleDevice.h */,
+				E8781864823743E48023D758 /* PTDBleDevice.m */,
+				A5D3547A1435415A8CEC0A6E /* ProfileDelegate_Protocol.h */,
+				B21DC297AF2D426499427B83 /* Profile_Protocol.h */,
+				4283D8F1039140669D5CC578 /* oad.h */,
+				B21C1A3376284E8693638537 /* Support Files */,
+			);
+			path = "Bean-iOS-OSX-SDK";
+			sourceTree = "<group>";
+		};
+		8C79972BA3074F5B94F1A6C9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				423D1E7372304C9688401A88 /* Pods-Hidrate-InAppSettingsKit.xcconfig */,
+				6517DF7CCB0B4C809E96DA79 /* Pods-Hidrate-InAppSettingsKit-Private.xcconfig */,
+				00FEF179CD3D4D34B71213BF /* Pods-Hidrate-InAppSettingsKit-dummy.m */,
+				76A1D4EA62BF42689F998AE2 /* Pods-Hidrate-InAppSettingsKit-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		917EE9BCFF5E44509681D0C3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03A5B2C51A9F4AEB88780825 /* Pods-Hidrate-CocoaLumberjack.xcconfig */,
+				58DA21094AED4E3F9A9645E4 /* Pods-Hidrate-CocoaLumberjack-Private.xcconfig */,
+				D98997BC96F2409596A1A77B /* Pods-Hidrate-CocoaLumberjack-dummy.m */,
+				273195E8B09E433F8BD5F3EF /* Pods-Hidrate-CocoaLumberjack-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		AF60E329ACE641F78559F9D0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				22434CD26A23495AB9A478CE /* Pods-Hidrate */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B21C1A3376284E8693638537 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1455DC734B084F2189628120 /* Pods-Hidrate-Bean-iOS-OSX-SDK.xcconfig */,
+				D23C843030F94FCB838DC770 /* Pods-Hidrate-Bean-iOS-OSX-SDK-Private.xcconfig */,
+				951B187409704099B18D3DCA /* Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m */,
+				05FC47CDE30D4BC3895FECE6 /* Pods-Hidrate-Bean-iOS-OSX-SDK-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		C64322412A904103A2FBB60E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				06CD922873F04658B1EC44B6 /* DDASLLogCapture.h */,
+				26CE439BE05548C9B025A754 /* DDASLLogCapture.m */,
+				687F2A7795D94BDD8B2246A1 /* DDASLLogger.h */,
+				93147BF16F2147DDA60522AA /* DDASLLogger.m */,
+				2FD04EAA3D2C47078BBF8019 /* DDAbstractDatabaseLogger.h */,
+				65AA811ED8A1427995279CB4 /* DDAbstractDatabaseLogger.m */,
+				95C4465843044861B3D13663 /* DDAssert.h */,
+				F494BC454F4B4902864AFF7B /* DDFileLogger.h */,
+				7DBA92676CA0456F906CF87B /* DDFileLogger.m */,
+				238B7A82F60B42FE848D0168 /* DDLog.h */,
+				B0362E5EBA6147EE88576500 /* DDLog.m */,
+				AEF954CBADA44DF5804CB4B0 /* DDLog+LOGV.h */,
+				8BD9394AF7D140D881A58848 /* DDTTYLogger.h */,
+				6E78FC3460C84C609C8F797C /* DDTTYLogger.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		F092FBF6905E48CEBA91650F /* InAppSettingsKit */ = {
+			isa = PBXGroup;
+			children = (
+				74D3CDA7ADFE4C209BFD1939 /* IASKAppSettingsViewController.h */,
+				4CE39C3F24104F29AF00F018 /* IASKAppSettingsViewController.m */,
+				D9D01677422348E2B5584981 /* IASKAppSettingsWebViewController.h */,
+				DC4F306952514DEB99E9A110 /* IASKAppSettingsWebViewController.m */,
+				6F5F304313C14D04A387C750 /* IASKPSSliderSpecifierViewCell.h */,
+				765911E623EF464A82628B91 /* IASKPSSliderSpecifierViewCell.m */,
+				B9F0ACBC7F78420FA22ACC99 /* IASKPSTextFieldSpecifierViewCell.h */,
+				3E509B51210D4559A38DE914 /* IASKPSTextFieldSpecifierViewCell.m */,
+				BDBA9735BAE14D12B003A028 /* IASKPSTitleValueSpecifierViewCell.h */,
+				0F8097B0F6EF45BFAAE21841 /* IASKPSTitleValueSpecifierViewCell.m */,
+				4CB8E1C27A434595953ECB35 /* IASKSettingsReader.h */,
+				078E3A175C7A4A7295916965 /* IASKSettingsReader.m */,
+				BD65F331931E4E95833135C8 /* IASKSettingsStore.h */,
+				F151BF02D90C44A4AEF1C7CC /* IASKSettingsStore.m */,
+				A92BA64CF3D94F75B425C660 /* IASKSettingsStoreFile.h */,
+				59B96E8950A44D38B0A53491 /* IASKSettingsStoreFile.m */,
+				F86F6238D11B4DA5993943B1 /* IASKSettingsStoreUserDefaults.h */,
+				64189C5BF4F6473381D654C6 /* IASKSettingsStoreUserDefaults.m */,
+				33AFC07E53224855AF3D37FD /* IASKSlider.h */,
+				F070D50B4C754A6D96FF8A65 /* IASKSlider.m */,
+				B15B6BC268FF4A31ACC16D3E /* IASKSpecifier.h */,
+				CF14CF45A2704679A1A8D4C2 /* IASKSpecifier.m */,
+				CF6053FA960C44FDBB9FB6E8 /* IASKSpecifierValuesViewController.h */,
+				70327DC27E0C43FA813D5C07 /* IASKSpecifierValuesViewController.m */,
+				DEEDC27546E1463883180B87 /* IASKSwitch.h */,
+				9D674871F6594811BE8541EB /* IASKSwitch.m */,
+				74A0E788499F4020BB423FD7 /* IASKTextField.h */,
+				1313984E00B44876887D127A /* IASKTextField.m */,
+				ECC7782C68B64412856277C1 /* IASKViewController.h */,
+				8C79972BA3074F5B94F1A6C9 /* Support Files */,
+			);
+			path = InAppSettingsKit;
+			sourceTree = "<group>";
+		};
+		F3A158388A2B49FD83793AAB /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				C64322412A904103A2FBB60E /* Core */,
+				2DBC4DA804DE43EA81203922 /* Extensions */,
+				917EE9BCFF5E44509681D0C3 /* Support Files */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7205F300B3714CAE86C0BAD1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF1AEF6990447C9A3CF7260 /* DDASLLogCapture.h in Headers */,
+				73654313E7BE407CA319E50E /* DDASLLogger.h in Headers */,
+				319AD64CD5C44BB0B44F0F67 /* DDAbstractDatabaseLogger.h in Headers */,
+				7EE877CC69294C6490D5432E /* DDAssert.h in Headers */,
+				9FEA593CEEFA4C01A18BB308 /* DDContextFilterLogFormatter.h in Headers */,
+				6B9CC8B2E9494AF5B694DB4F /* DDDispatchQueueLogFormatter.h in Headers */,
+				3E9AA8DDF8E84415A31B2CD5 /* DDFileLogger.h in Headers */,
+				383BAF79FCD448CA884CC77F /* DDLog+LOGV.h in Headers */,
+				3DDBA21C8BF245C58C23B178 /* DDLog.h in Headers */,
+				19D2C13FB9124E728475B910 /* DDMultiFormatter.h in Headers */,
+				4A650AF7BFCD410A8B6E4CF1 /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC886C30480476C9A36A01B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C44BAB352F948E1A911B436 /* AppMessageTypes.h in Headers */,
+				E43794003AC345A6861281E0 /* AppMessages.h in Headers */,
+				6C7BA4D9739D428EAD5708F9 /* AppMessagingLayer.h in Headers */,
+				E4E35AEFB122451EAA3C7954 /* BEAN_Globals.h in Headers */,
+				612875F892D048DD911AC6F9 /* BEAN_Helper.h in Headers */,
+				9E57DD5079EC4E52827D7E04 /* BatteryProfile.h in Headers */,
+				2E3FD05872394662BAE24F88 /* BleProfile.h in Headers */,
+				2CAC15119C1B4DE5B0B2AEFA /* CBPeripheral+UniqueId.h in Headers */,
+				69B0A2A0ABA040F7ADDAE045 /* CBPeripheral+isConnected_Universal.h in Headers */,
+				D8B9D9C7C3264FD788FB38CC /* DevInfoProfile.h in Headers */,
+				C4EAD35337FA401AAFCFAB93 /* GattCharacteristicHandler.h in Headers */,
+				270D22E5FBAB4DD7A91644E7 /* GattCharacteristicObserver.h in Headers */,
+				1782C5C6A61A489395CC8749 /* GattPacket.h in Headers */,
+				379102E4CB6F4E8A9FE17FC8 /* GattSerialMessage.h in Headers */,
+				EE64F226062C46C7946E9703 /* GattSerialMessageRxAssembler.h in Headers */,
+				A85EA0D877624EE1AE4399B2 /* GattSerialProfile.h in Headers */,
+				751B6A95339C4301946C6E44 /* GattSerialTransport.h in Headers */,
+				6CC45A7C812947E68C06A7A2 /* GattTransport.h in Headers */,
+				F612B347BE3740588F35FC1E /* NSData+CRC.h in Headers */,
+				764FA698F01440EAA192212D /* OadProfile.h in Headers */,
+				128E4EE1AEE94823929FAC2C /* PTDBEAN_Helper.h in Headers */,
+				D2AC056C4BBB4B60BDC1C67F /* PTDBean+Protected.h in Headers */,
+				8221A88D4975450B824DAC2D /* PTDBean.h in Headers */,
+				DC41B2E511BA4D40ADEAFEBA /* PTDBeanManager+Protected.h in Headers */,
+				1D24945AF90F4F899BDF928E /* PTDBeanManager.h in Headers */,
+				C7798CE63460438AB7D3F154 /* PTDBeanRadioConfig.h in Headers */,
+				B289CF4FA3B447C18B8973C1 /* PTDBleDevice.h in Headers */,
+				6F050E7D2C9C4BD2ADC080F2 /* ProfileDelegate_Protocol.h in Headers */,
+				984B4DB6138A455E9D9E6EC2 /* Profile_Protocol.h in Headers */,
+				89761198C09C4572A950844E /* oad.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E67CF5CB70D548C9B0E0507A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21F565E1E9D46F9813BA7D3 /* IASKAppSettingsViewController.h in Headers */,
+				F0E6E3A2583C4380AAB92D27 /* IASKAppSettingsWebViewController.h in Headers */,
+				F87A7DA1540F450CA04F73AF /* IASKPSSliderSpecifierViewCell.h in Headers */,
+				1336DA6EC17C45ED8380E7AB /* IASKPSTextFieldSpecifierViewCell.h in Headers */,
+				A02A408ED67E40D083E10790 /* IASKPSTitleValueSpecifierViewCell.h in Headers */,
+				85250FB76C2F4DC881E3C187 /* IASKSettingsReader.h in Headers */,
+				707D6A9CE76D41F198881E64 /* IASKSettingsStore.h in Headers */,
+				B510564A59324C1389089FA9 /* IASKSettingsStoreFile.h in Headers */,
+				51F6024A37C449C8B3C0DE34 /* IASKSettingsStoreUserDefaults.h in Headers */,
+				C6B5BEAF1CE4429A8E50629E /* IASKSlider.h in Headers */,
+				5CFD073BACF04FD494952AAE /* IASKSpecifier.h in Headers */,
+				9610ED1757254DF79E936BCB /* IASKSpecifierValuesViewController.h in Headers */,
+				8EEC365EAC854D479909F788 /* IASKSwitch.h in Headers */,
+				48CCCAA12DFE4C69BBADA579 /* IASKTextField.h in Headers */,
+				42CF1E4DEAAF4089B113C3C7 /* IASKViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7727F68E54614FA0934C14CB /* Pods-Hidrate-Bean-iOS-OSX-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DB725EECE8D41C9888A0E9E /* Build configuration list for PBXNativeTarget "Pods-Hidrate-Bean-iOS-OSX-SDK" */;
+			buildPhases = (
+				B77C4DD3E9AA443BB81FDF32 /* Sources */,
+				51336D8AC8C94DBB81E0C20D /* Frameworks */,
+				7BC886C30480476C9A36A01B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Hidrate-Bean-iOS-OSX-SDK";
+			productName = "Pods-Hidrate-Bean-iOS-OSX-SDK";
+			productReference = 3EFD0CC916AD444192AB58CA /* libPods-Hidrate-Bean-iOS-OSX-SDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8D7B3CF61CC3425591B248C4 /* Pods-Hidrate-CocoaLumberjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61139DBFF9E54F16B6ADBB26 /* Build configuration list for PBXNativeTarget "Pods-Hidrate-CocoaLumberjack" */;
+			buildPhases = (
+				5A7C3CA2E1C1442E9B73B4FE /* Sources */,
+				632E0B523E704B85A4EC2B45 /* Frameworks */,
+				7205F300B3714CAE86C0BAD1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Hidrate-CocoaLumberjack";
+			productName = "Pods-Hidrate-CocoaLumberjack";
+			productReference = FEB225E8D0DB4C6B8A64AC2D /* libPods-Hidrate-CocoaLumberjack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		94B7BE6BB4FA4AF2AB9CF2A5 /* Pods-Hidrate-InAppSettingsKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4966620D7E5B4EAFBCBD075B /* Build configuration list for PBXNativeTarget "Pods-Hidrate-InAppSettingsKit" */;
+			buildPhases = (
+				810009C151B94FC29884D939 /* Sources */,
+				559640FC7FCE44CBA4567F77 /* Frameworks */,
+				E67CF5CB70D548C9B0E0507A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Hidrate-InAppSettingsKit";
+			productName = "Pods-Hidrate-InAppSettingsKit";
+			productReference = 1631FE48FC1046969DB00C26 /* libPods-Hidrate-InAppSettingsKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C8C91756087F4F809828577E /* Pods-Hidrate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83BF35406D5D42F7AC2584D5 /* Build configuration list for PBXNativeTarget "Pods-Hidrate" */;
+			buildPhases = (
+				AD41ED4551144BF2A56D0CD2 /* Sources */,
+				0A1EE4A6F9704A93940583AB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCD1BF22F3F049A08507FE13 /* PBXTargetDependency */,
+				FE71FA2DED384BD5A8F3BEEA /* PBXTargetDependency */,
+				3729DE1CBF2146BA8F19A14F /* PBXTargetDependency */,
+			);
+			name = "Pods-Hidrate";
+			productName = "Pods-Hidrate";
+			productReference = 63EF1F5A7C7A49C8B3E72021 /* libPods-Hidrate.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00893EF857642BA915698F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = BD79569038594FF2BC384365 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 36D231AE11A046DE94E79E85;
+			productRefGroup = 663AA235B51A4BC3892C802C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8C91756087F4F809828577E /* Pods-Hidrate */,
+				7727F68E54614FA0934C14CB /* Pods-Hidrate-Bean-iOS-OSX-SDK */,
+				8D7B3CF61CC3425591B248C4 /* Pods-Hidrate-CocoaLumberjack */,
+				94B7BE6BB4FA4AF2AB9CF2A5 /* Pods-Hidrate-InAppSettingsKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A7C3CA2E1C1442E9B73B4FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F9CF2035EC4700822D381A /* DDASLLogCapture.m in Sources */,
+				5F7C5B1AD82C407E9E4B6CC4 /* DDASLLogger.m in Sources */,
+				3E8CABE30B8347A1B5F5C1B5 /* DDAbstractDatabaseLogger.m in Sources */,
+				D8AA044A1A2C49BB85DF37EC /* DDContextFilterLogFormatter.m in Sources */,
+				82D924E0140F41A6ABB3F241 /* DDDispatchQueueLogFormatter.m in Sources */,
+				2A95E03BC9154AF4A1913375 /* DDFileLogger.m in Sources */,
+				09869C135F234DFD9844F4FD /* DDLog.m in Sources */,
+				68E6016EED434ADA855722D4 /* DDMultiFormatter.m in Sources */,
+				37311BAE335744A5B3B11EF8 /* DDTTYLogger.m in Sources */,
+				D57607F9245F485BB7A6F19B /* Pods-Hidrate-CocoaLumberjack-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810009C151B94FC29884D939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D7BF5149894A48AEFFF0ED /* IASKAppSettingsViewController.m in Sources */,
+				24DD939AE579447AA8B831DA /* IASKAppSettingsWebViewController.m in Sources */,
+				6360281E8B1841CD8F7EC8AD /* IASKPSSliderSpecifierViewCell.m in Sources */,
+				370BE4919D5B4B95B22649DA /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
+				6343245D2FE44046B6E9C330 /* IASKPSTitleValueSpecifierViewCell.m in Sources */,
+				199106870B9149C3A2BC6BA9 /* IASKSettingsReader.m in Sources */,
+				2F2605E276F447A7990F3658 /* IASKSettingsStore.m in Sources */,
+				D3EE7E0952C3437CA24A852D /* IASKSettingsStoreFile.m in Sources */,
+				EFBC7CF017C84339A0E5D834 /* IASKSettingsStoreUserDefaults.m in Sources */,
+				FDEA4C8E9B6849FBB897AEC0 /* IASKSlider.m in Sources */,
+				1804D90625A949EEAE6FABFE /* IASKSpecifier.m in Sources */,
+				576CE996402E417FB59CF259 /* IASKSpecifierValuesViewController.m in Sources */,
+				03AB2C8221DD4ADCA3D633F0 /* IASKSwitch.m in Sources */,
+				C4F1D6C7A5174745842BC762 /* IASKTextField.m in Sources */,
+				32F020A752B541869376C79E /* Pods-Hidrate-InAppSettingsKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD41ED4551144BF2A56D0CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41253B5D53B941A6A43121F8 /* Pods-Hidrate-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77C4DD3E9AA443BB81FDF32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342177396A4F49E7BDD41933 /* AppMessagingLayer.m in Sources */,
+				B4E2FEC9530044119E583954 /* BEAN_Helper.m in Sources */,
+				7A70D25688944E66BBC25927 /* BatteryProfile.m in Sources */,
+				9EC9AE06786F45FF8CC3C4AA /* BleProfile.m in Sources */,
+				8C10E37756914061BB4E184E /* CBPeripheral+UniqueId.m in Sources */,
+				1B4E5D1B19254D828AE0BB74 /* CBPeripheral+isConnected_Universal.m in Sources */,
+				DAFBBA3DC44043FEB0A8C78D /* DevInfoProfile.m in Sources */,
+				712A081DBC7240F990806F97 /* GattPacket.m in Sources */,
+				A272C0C23E6B4FF0AC05D770 /* GattSerialMessage.m in Sources */,
+				E37880EA6CF94BA8AC646F5C /* GattSerialMessageRxAssembler.m in Sources */,
+				685D64FBB5A14955BE01EDF6 /* GattSerialProfile.m in Sources */,
+				A2BA86751A784B91883CC6EF /* GattSerialTransport.m in Sources */,
+				B5BD5E2483E147BB807447A4 /* GattTransport.m in Sources */,
+				01CA19EC68264962BDE6DA8B /* NSData+CRC.m in Sources */,
+				D601CB3DAD1A405386C7B09D /* OadProfile.m in Sources */,
+				FF16730122F846CC98A63823 /* PTDBEAN_Helper.m in Sources */,
+				2BF97E71EB2B4A048AFDA014 /* PTDBean.m in Sources */,
+				761F3B32616D41748C681577 /* PTDBeanManager.m in Sources */,
+				0DA660CEFADE4A05B3EEB5B9 /* PTDBeanRadioConfig.m in Sources */,
+				0153FFFCD28946CDAE0436D8 /* PTDBleDevice.m in Sources */,
+				EEF7352C5E214F1DABB1FE4D /* Pods-Hidrate-Bean-iOS-OSX-SDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3729DE1CBF2146BA8F19A14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94B7BE6BB4FA4AF2AB9CF2A5 /* Pods-Hidrate-InAppSettingsKit */;
+			targetProxy = AB8E876E0C9A48A597211AC0 /* PBXContainerItemProxy */;
+		};
+		DCD1BF22F3F049A08507FE13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7727F68E54614FA0934C14CB /* Pods-Hidrate-Bean-iOS-OSX-SDK */;
+			targetProxy = 979A697641014B3FA69043B5 /* PBXContainerItemProxy */;
+		};
+		FE71FA2DED384BD5A8F3BEEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D7B3CF61CC3425591B248C4 /* Pods-Hidrate-CocoaLumberjack */;
+			targetProxy = AA45049CC0E049B69D5D94F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		164870DBF7804C4BBBA51705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		17A8E6162A56414B8B0351C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D23C843030F94FCB838DC770 /* Pods-Hidrate-Bean-iOS-OSX-SDK-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-Bean-iOS-OSX-SDK-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		597A236276764230A70536F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D23C843030F94FCB838DC770 /* Pods-Hidrate-Bean-iOS-OSX-SDK-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-Bean-iOS-OSX-SDK-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73AC15A5F23740EF94388633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		855B848009FA44AAB0847675 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740D2C1A98B94BFB9318773A /* Pods-Hidrate.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		93656077B3854DFEABE10033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740D2C1A98B94BFB9318773A /* Pods-Hidrate.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A95023364B0A4259A1EE300C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58DA21094AED4E3F9A9645E4 /* Pods-Hidrate-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-CocoaLumberjack-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD8F58B89DD4446686B071D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58DA21094AED4E3F9A9645E4 /* Pods-Hidrate-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-CocoaLumberjack-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9D830D1A11940DDBFEDD319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6517DF7CCB0B4C809E96DA79 /* Pods-Hidrate-InAppSettingsKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-InAppSettingsKit-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB19C689F85A44E1BD1A9DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6517DF7CCB0B4C809E96DA79 /* Pods-Hidrate-InAppSettingsKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Hidrate-InAppSettingsKit-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4966620D7E5B4EAFBCBD075B /* Build configuration list for PBXNativeTarget "Pods-Hidrate-InAppSettingsKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB19C689F85A44E1BD1A9DB2 /* Debug */,
+				F9D830D1A11940DDBFEDD319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DB725EECE8D41C9888A0E9E /* Build configuration list for PBXNativeTarget "Pods-Hidrate-Bean-iOS-OSX-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A8E6162A56414B8B0351C6 /* Debug */,
+				597A236276764230A70536F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61139DBFF9E54F16B6ADBB26 /* Build configuration list for PBXNativeTarget "Pods-Hidrate-CocoaLumberjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8F58B89DD4446686B071D7 /* Debug */,
+				A95023364B0A4259A1EE300C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83BF35406D5D42F7AC2584D5 /* Build configuration list for PBXNativeTarget "Pods-Hidrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855B848009FA44AAB0847675 /* Debug */,
+				93656077B3854DFEABE10033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD79569038594FF2BC384365 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164870DBF7804C4BBBA51705 /* Debug */,
+				73AC15A5F23740EF94388633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00893EF857642BA915698F6 /* Project object */;
+}

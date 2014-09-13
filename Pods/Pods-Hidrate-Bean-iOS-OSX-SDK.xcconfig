@@ -1,0 +1,2 @@
+PODS_HIDRATE_BEAN_IOS_OSX_SDK_HEADER_SEARCH_PATHS = $(SRCROOT)/../bean-apple-sdk/source/Public
+PODS_HIDRATE_BEAN_IOS_OSX_SDK_OTHER_LDFLAGS = -framework CoreBluetooth

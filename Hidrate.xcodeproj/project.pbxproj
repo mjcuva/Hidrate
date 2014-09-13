@@ -21,6 +21,7 @@
 		4913A57519C3E3DD0038BADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55719C3E3DD0038BADB /* UIKit.framework */; };
 		4913A57D19C3E3DD0038BADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4913A57B19C3E3DD0038BADB /* InfoPlist.strings */; };
 		4913A57F19C3E3DD0038BADB /* HidrateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4913A57E19C3E3DD0038BADB /* HidrateTests.m */; };
+		E9737090BE08456AA1185C29 /* libPods-Hidrate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C664E6135E1448D8B92FB127 /* libPods-Hidrate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		4913A57A19C3E3DD0038BADB /* HidrateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HidrateTests-Info.plist"; sourceTree = "<group>"; };
 		4913A57C19C3E3DD0038BADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4913A57E19C3E3DD0038BADB /* HidrateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HidrateTests.m; sourceTree = "<group>"; };
+		9C3806761486433E86D24C84 /* Pods-Hidrate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidrate.xcconfig"; path = "Pods/Pods-Hidrate.xcconfig"; sourceTree = "<group>"; };
+		C664E6135E1448D8B92FB127 /* libPods-Hidrate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				4913A55619C3E3DD0038BADB /* CoreGraphics.framework in Frameworks */,
 				4913A55819C3E3DD0038BADB /* UIKit.framework in Frameworks */,
 				4913A55419C3E3DD0038BADB /* Foundation.framework in Frameworks */,
+				E9737090BE08456AA1185C29 /* libPods-Hidrate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				4913A57819C3E3DD0038BADB /* HidrateTests */,
 				4913A55219C3E3DD0038BADB /* Frameworks */,
 				4913A55119C3E3DD0038BADB /* Products */,
+				9C3806761486433E86D24C84 /* Pods-Hidrate.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				4913A55519C3E3DD0038BADB /* CoreGraphics.framework */,
 				4913A55719C3E3DD0038BADB /* UIKit.framework */,
 				4913A57219C3E3DD0038BADB /* XCTest.framework */,
+				C664E6135E1448D8B92FB127 /* libPods-Hidrate.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4913A58219C3E3DD0038BADB /* Build configuration list for PBXNativeTarget "Hidrate" */;
 			buildPhases = (
+				DF3D05A3DB5047D6B25CB680 /* Check Pods Manifest.lock */,
 				4913A54C19C3E3DD0038BADB /* Sources */,
 				4913A54D19C3E3DD0038BADB /* Frameworks */,
 				4913A54E19C3E3DD0038BADB /* Resources */,
+				DDBC168F8EC54C1885EA970B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +252,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DDBC168F8EC54C1885EA970B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Hidrate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3D05A3DB5047D6B25CB680 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4913A54C19C3E3DD0038BADB /* Sources */ = {
@@ -374,6 +415,7 @@
 		};
 		4913A58319C3E3DD0038BADB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3806761486433E86D24C84 /* Pods-Hidrate.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +429,7 @@
 		};
 		4913A58419C3E3DD0038BADB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3806761486433E86D24C84 /* Pods-Hidrate.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +500,7 @@
 				4913A58419C3E3DD0038BADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4913A58519C3E3DD0038BADB /* Build configuration list for PBXNativeTarget "HidrateTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +509,7 @@
 				4913A58719C3E3DD0038BADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
