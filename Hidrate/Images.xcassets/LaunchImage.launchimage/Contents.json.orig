@@ -14,6 +14,7 @@
       "filename" : "splash.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
+<<<<<<< HEAD
       "scale" : "2x"
     },
     {
@@ -21,6 +22,8 @@
       "idiom" : "iphone",
       "extent" : "full-screen",
       "subtype" : "retina4",
+=======
+>>>>>>> master
       "scale" : "2x"
     }
   ],
