@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTDBeanManager.h"
 
-@interface HiAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HiAppDelegate : UIResponder<UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property PTDBeanManager *beanManager;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
