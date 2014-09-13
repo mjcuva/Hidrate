@@ -24,6 +24,8 @@
 		4913A57519C3E3DD0038BADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55719C3E3DD0038BADB /* UIKit.framework */; };
 		4913A57D19C3E3DD0038BADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4913A57B19C3E3DD0038BADB /* InfoPlist.strings */; };
 		4913A57F19C3E3DD0038BADB /* HidrateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4913A57E19C3E3DD0038BADB /* HidrateTests.m */; };
+		4913A58F19C4D1D90038BADB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A58E19C4D1D90038BADB /* CoreData.framework */; };
+		4913A59119C4D20A0038BADB /* HidrateModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4913A59019C4D20A0038BADB /* HidrateModel.xcdatamodeld */; };
 		E9737090BE08456AA1185C29 /* libPods-Hidrate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C664E6135E1448D8B92FB127 /* libPods-Hidrate.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,7 @@
 		4913A57A19C3E3DD0038BADB /* HidrateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HidrateTests-Info.plist"; sourceTree = "<group>"; };
 		4913A57C19C3E3DD0038BADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4913A57E19C3E3DD0038BADB /* HidrateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HidrateTests.m; sourceTree = "<group>"; };
+		4913A58E19C4D1D90038BADB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9C3806761486433E86D24C84 /* Pods-Hidrate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hidrate.xcconfig"; path = "Pods/Pods-Hidrate.xcconfig"; sourceTree = "<group>"; };
 		C664E6135E1448D8B92FB127 /* libPods-Hidrate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hidrate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4913A58F19C4D1D90038BADB /* CoreData.framework in Frameworks */,
 				4913A55619C3E3DD0038BADB /* CoreGraphics.framework in Frameworks */,
 				4913A55819C3E3DD0038BADB /* UIKit.framework in Frameworks */,
 				4913A55419C3E3DD0038BADB /* Foundation.framework in Frameworks */,
@@ -127,6 +131,7 @@
 		36F8B5AD19C494AA00A2C04A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4913A59019C4D20A0038BADB /* HidrateModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		4913A55219C3E3DD0038BADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4913A58E19C4D1D90038BADB /* CoreData.framework */,
 				4913A55319C3E3DD0038BADB /* Foundation.framework */,
 				4913A55519C3E3DD0038BADB /* CoreGraphics.framework */,
 				4913A55719C3E3DD0038BADB /* UIKit.framework */,
@@ -382,6 +388,7 @@
 				4913A56419C3E3DD0038BADB /* HiAppDelegate.m in Sources */,
 				36F8B5BA19C4956F00A2C04A /* HiHistoryViewController.m in Sources */,
 				36F8B5B119C4955600A2C04A /* HiWelcomeViewController.m in Sources */,
+				4913A59119C4D20A0038BADB /* HidrateModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +607,18 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4913A59019C4D20A0038BADB /* HidrateModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+			);
+			name = HidrateModel.xcdatamodeld;
+			path = ../../HidrateModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4913A54819C3E3DD0038BADB /* Project object */;
 }
