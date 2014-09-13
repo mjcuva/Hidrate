@@ -22,10 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 <<<<<<< HEAD
-	<string>19</string>
+	<string>64</string>
 =======
-	<string>12</string>
->>>>>>> master
+	<string>14</string>
+>>>>>>> 2cc3346e8e9e4d31e783c528076e00d282049347
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

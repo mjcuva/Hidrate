@@ -7,9 +7,10 @@
 //
 
 #import "HiHistoryTableViewController.h"
+#import "HiAppDelegate.h"
 
 @interface HiHistoryTableViewController ()
-
+@property (strong, nonatomic) NSArray *days;
 @end
 
 @implementation HiHistoryTableViewController
@@ -26,12 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSManagedObjectContext *context = ((HiAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"Day"];
+    NSSortDescriptor *dateSort = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    fr.sortDescriptors = @[dateSort];
+    
+    self.days = [context executeFetchRequest:fr error:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,14 +63,14 @@
     if (section == 0) {
         return 1;
     } else {
-        return 12;
+        return self.days.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryCell" forIndexPath:indexPath];
-
+    
     if ([indexPath section] == 0) {
         [[cell textLabel] setText:@"7 day streak"];
         [[cell detailTextLabel] setText:@"Awesome!"];
@@ -83,7 +85,7 @@
     } else {
         dayWaterAmount = arc4random() % 100;
     }
-    [[cell textLabel] setText:@"[Date]"];
+    [[cell textLabel] setText:[self.days[indexPath.item] description]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%", dayWaterAmount]];
     return cell;
 }
