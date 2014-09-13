@@ -8,6 +8,8 @@
 
 #import "HiTodayViewController.h"
 #import "PTDBeanManager.h"
+#import "HiAppDelegate.h"
+#import "Day.h"
 
 @interface HiTodayViewController ()<PTDBeanManagerDelegate, PTDBeanDelegate>
 @property (strong, nonatomic) PTDBeanManager *beanManager;
@@ -71,6 +73,8 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
     // do stuff with your bean
+    // Send twice due to bug
+    [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
 
@@ -82,7 +86,10 @@ const int HIGH_WATER_DIFF_PX = 284;
 
 - (void)viewDidLoad
 {
-    self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self];
+    [[self navigationItem] setHidesBackButton:YES];
+
+    [self setBeanManager:[AppDelegate beanManager]];
+    [[self beanManager] setDelegate:self];
 }
 
 - (void)setWaterPercentConsumed:(int)percent

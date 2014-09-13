@@ -25,3 +25,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 static const int ddLogLevel = LOG_LEVEL_WARN;
 #endif
+
+#import "HiAppDelegate.h"
+#define AppDelegate (HiAppDelegate *)[[UIApplication sharedApplication] delegate]

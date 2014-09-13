@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"full-gradient-background.png"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

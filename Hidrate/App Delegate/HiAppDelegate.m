@@ -19,6 +19,8 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
+    [self setBeanManager:[[PTDBeanManager alloc] init]];
+
     [[UINavigationBar appearance]
         setBarTintColor:[UIColor colorWithRed:9.0 / 256 green:49.0 / 256 blue:64.0 / 256 alpha:1]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];

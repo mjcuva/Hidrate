@@ -13,6 +13,8 @@
 @interface Day : NSManagedObject
 
 @property (nonatomic) double amountDrank;
-@property (nonatomic) NSTimeInterval date;
+@property (nonatomic) int32_t day;
+@property (nonatomic) int32_t month;
+@property (nonatomic) int32_t year;
 
 @end

@@ -14,7 +14,12 @@
 @dynamic age;
 @dynamic feet;
 @dynamic gender;
+<<<<<<< HEAD
 @dynamic inches;
 @dynamic weight;
+=======
+@dynamic dailyWaterNeed;
+
+>>>>>>> c0160c81d77429036fc6bc4acd8b85312097ce72
 
 @end

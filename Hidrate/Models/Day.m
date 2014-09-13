@@ -12,6 +12,8 @@
 @implementation Day
 
 @dynamic amountDrank;
-@dynamic date;
+@dynamic day;
+@dynamic month;
+@dynamic year;
 
 @end
