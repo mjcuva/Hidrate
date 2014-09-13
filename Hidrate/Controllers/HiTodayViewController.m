@@ -23,11 +23,6 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [[self navigationItem] setHidesBackButton:YES];
-}
-
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
 {
 }
