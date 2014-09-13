@@ -16,7 +16,7 @@
 @dynamic feet;
 @dynamic inches;
 @dynamic gender;
-
+@dynamic dailyWaterNeed;
 
 
 @end
