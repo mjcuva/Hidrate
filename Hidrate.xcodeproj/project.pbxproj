@@ -14,7 +14,6 @@
 		4913A56019C3E3DD0038BADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4913A55F19C3E3DD0038BADB /* main.m */; };
 		4913A56419C3E3DD0038BADB /* HiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4913A56319C3E3DD0038BADB /* HiAppDelegate.m */; };
 		4913A56719C3E3DD0038BADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4913A56519C3E3DD0038BADB /* Main.storyboard */; };
-		4913A56A19C3E3DD0038BADB /* HiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4913A56919C3E3DD0038BADB /* HiViewController.m */; };
 		4913A56C19C3E3DD0038BADB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4913A56B19C3E3DD0038BADB /* Images.xcassets */; };
 		4913A57319C3E3DD0038BADB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A57219C3E3DD0038BADB /* XCTest.framework */; };
 		4913A57419C3E3DD0038BADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55319C3E3DD0038BADB /* Foundation.framework */; };
@@ -46,8 +45,6 @@
 		4913A56219C3E3DD0038BADB /* HiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiAppDelegate.h; sourceTree = "<group>"; };
 		4913A56319C3E3DD0038BADB /* HiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiAppDelegate.m; sourceTree = "<group>"; };
 		4913A56619C3E3DD0038BADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4913A56819C3E3DD0038BADB /* HiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiViewController.h; sourceTree = "<group>"; };
-		4913A56919C3E3DD0038BADB /* HiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiViewController.m; sourceTree = "<group>"; };
 		4913A56B19C3E3DD0038BADB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4913A57119C3E3DD0038BADB /* HidrateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HidrateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4913A57219C3E3DD0038BADB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -83,6 +80,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36F8B5AA19C4948100A2C04A /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4913A56219C3E3DD0038BADB /* HiAppDelegate.h */,
+				4913A56319C3E3DD0038BADB /* HiAppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		36F8B5AB19C4949700A2C04A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4913A56519C3E3DD0038BADB /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36F8B5AC19C494A200A2C04A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36F8B5AD19C494AA00A2C04A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36F8B5AE19C494B400A2C04A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4913A54719C3E3DD0038BADB = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +153,11 @@
 		4913A55919C3E3DD0038BADB /* Hidrate */ = {
 			isa = PBXGroup;
 			children = (
-				4913A56219C3E3DD0038BADB /* HiAppDelegate.h */,
-				4913A56319C3E3DD0038BADB /* HiAppDelegate.m */,
-				4913A56519C3E3DD0038BADB /* Main.storyboard */,
-				4913A56819C3E3DD0038BADB /* HiViewController.h */,
-				4913A56919C3E3DD0038BADB /* HiViewController.m */,
+				36F8B5AB19C4949700A2C04A /* Views */,
+				36F8B5AD19C494AA00A2C04A /* Models */,
+				36F8B5AC19C494A200A2C04A /* Controllers */,
+				36F8B5AA19C4948100A2C04A /* App Delegate */,
+				36F8B5AE19C494B400A2C04A /* Resources */,
 				4913A56B19C3E3DD0038BADB /* Images.xcassets */,
 				4913A55A19C3E3DD0038BADB /* Supporting Files */,
 			);
@@ -137,7 +172,7 @@
 				4913A55F19C3E3DD0038BADB /* main.m */,
 				4913A56119C3E3DD0038BADB /* Hidrate-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4913A57819C3E3DD0038BADB /* HidrateTests */ = {
@@ -155,7 +190,7 @@
 				4913A57A19C3E3DD0038BADB /* HidrateTests-Info.plist */,
 				4913A57B19C3E3DD0038BADB /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +328,6 @@
 			files = (
 				4913A56019C3E3DD0038BADB /* main.m in Sources */,
 				4913A56419C3E3DD0038BADB /* HiAppDelegate.m in Sources */,
-				4913A56A19C3E3DD0038BADB /* HiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +454,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hidrate/Hidrate-Prefix.pch";
-				INFOPLIST_FILE = "Hidrate/Hidrate-Info.plist";
+				GCC_PREFIX_HEADER = "Hidrate/Supporting Files/Hidrate-Prefix.pch";
+				INFOPLIST_FILE = "Hidrate/Supporting Files/Hidrate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -434,8 +468,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hidrate/Hidrate-Prefix.pch";
-				INFOPLIST_FILE = "Hidrate/Hidrate-Info.plist";
+				GCC_PREFIX_HEADER = "Hidrate/Supporting Files/Hidrate-Prefix.pch";
+				INFOPLIST_FILE = "Hidrate/Supporting Files/Hidrate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,12 +485,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hidrate/Hidrate-Prefix.pch";
+				GCC_PREFIX_HEADER = "Hidrate/Supporting Files/Hidrate-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "HidrateTests/HidrateTests-Info.plist";
+				INFOPLIST_FILE = "HidrateTests/Supporting Files/HidrateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -473,8 +507,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hidrate/Hidrate-Prefix.pch";
-				INFOPLIST_FILE = "HidrateTests/HidrateTests-Info.plist";
+				GCC_PREFIX_HEADER = "Hidrate/Supporting Files/Hidrate-Prefix.pch";
+				INFOPLIST_FILE = "HidrateTests/Supporting Files/HidrateTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
