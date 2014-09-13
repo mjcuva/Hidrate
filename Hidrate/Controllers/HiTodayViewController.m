@@ -33,7 +33,11 @@ const int HIGH_WATER_DIFF_PX = 284;
 {
     if (self.beanManager.state == BeanManagerState_PoweredOn) {
         // if we're on, scan for advertisting beans
-        [self.beanManager startScanningForBeans_error:nil];
+        NSError *error;
+        [self.beanManager startScanningForBeans_error:&error];
+        if (error) {
+            DDLogError(@"Error in beanManagerDidUpdateState: %@", error);
+        }
     } else if (self.beanManager.state == BeanManagerState_PoweredOff) {
         // do something else
     }
@@ -46,7 +50,11 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
     if (self.connectedBean == nil) {
-        [self.beanManager connectToBean:bean error:nil];
+        NSError *error;
+        [self.beanManager connectToBean:bean error:&error];
+        if (error) {
+            DDLogError(@"Error in didDiscoverBean: %@", error);
+        }
         self.connectedBean = bean;
     }
 }
