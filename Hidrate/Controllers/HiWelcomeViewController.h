@@ -10,4 +10,6 @@
 
 @interface HiWelcomeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *introTextLabel;
+
 @end

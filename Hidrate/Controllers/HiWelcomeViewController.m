@@ -23,8 +23,20 @@
     return self;
 }
 
-- (void)viewDidLoad{
+- (void)viewDidLoad
+{
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"txt"];
+    NSError *error;
+    NSString *introText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        DDLogError(@"Error loading intro text: %@", error);
+    }
+    [[self introTextLabel] setText:introText];
 }
 
 @end
