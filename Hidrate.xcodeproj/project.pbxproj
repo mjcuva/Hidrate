@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36E37C0E19C4D1D700A9F379 /* HiHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */; };
 		36F8B5B119C4955600A2C04A /* HiWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B019C4955600A2C04A /* HiWelcomeViewController.m */; };
 		36F8B5B419C4956100A2C04A /* HiInitialSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B319C4956100A2C04A /* HiInitialSetupViewController.m */; };
 		36F8B5B719C4956900A2C04A /* HiTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B619C4956900A2C04A /* HiTodayViewController.m */; };
-		36F8B5BA19C4956F00A2C04A /* HiHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B919C4956F00A2C04A /* HiHistoryViewController.m */; };
 		4913A55419C3E3DD0038BADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55319C3E3DD0038BADB /* Foundation.framework */; };
 		4913A55619C3E3DD0038BADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55519C3E3DD0038BADB /* CoreGraphics.framework */; };
 		4913A55819C3E3DD0038BADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4913A55719C3E3DD0038BADB /* UIKit.framework */; };
@@ -38,14 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36E37C0C19C4D1D700A9F379 /* HiHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHistoryTableViewController.h; sourceTree = "<group>"; };
+		36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHistoryTableViewController.m; sourceTree = "<group>"; };
 		36F8B5AF19C4955600A2C04A /* HiWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiWelcomeViewController.h; sourceTree = "<group>"; };
 		36F8B5B019C4955600A2C04A /* HiWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiWelcomeViewController.m; sourceTree = "<group>"; };
 		36F8B5B219C4956100A2C04A /* HiInitialSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiInitialSetupViewController.h; sourceTree = "<group>"; };
 		36F8B5B319C4956100A2C04A /* HiInitialSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiInitialSetupViewController.m; sourceTree = "<group>"; };
 		36F8B5B519C4956900A2C04A /* HiTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiTodayViewController.h; sourceTree = "<group>"; };
 		36F8B5B619C4956900A2C04A /* HiTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiTodayViewController.m; sourceTree = "<group>"; };
-		36F8B5B819C4956F00A2C04A /* HiHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHistoryViewController.h; sourceTree = "<group>"; };
-		36F8B5B919C4956F00A2C04A /* HiHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHistoryViewController.m; sourceTree = "<group>"; };
 		4913A55019C3E3DD0038BADB /* Hidrate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hidrate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4913A55319C3E3DD0038BADB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4913A55519C3E3DD0038BADB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,8 +118,8 @@
 				36F8B5B319C4956100A2C04A /* HiInitialSetupViewController.m */,
 				36F8B5B519C4956900A2C04A /* HiTodayViewController.h */,
 				36F8B5B619C4956900A2C04A /* HiTodayViewController.m */,
-				36F8B5B819C4956F00A2C04A /* HiHistoryViewController.h */,
-				36F8B5B919C4956F00A2C04A /* HiHistoryViewController.m */,
+				36E37C0C19C4D1D700A9F379 /* HiHistoryTableViewController.h */,
+				36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,8 +379,8 @@
 				36F8B5B419C4956100A2C04A /* HiInitialSetupViewController.m in Sources */,
 				36F8B5B719C4956900A2C04A /* HiTodayViewController.m in Sources */,
 				4913A56019C3E3DD0038BADB /* main.m in Sources */,
+				36E37C0E19C4D1D700A9F379 /* HiHistoryTableViewController.m in Sources */,
 				4913A56419C3E3DD0038BADB /* HiAppDelegate.m in Sources */,
-				36F8B5BA19C4956F00A2C04A /* HiHistoryViewController.m in Sources */,
 				36F8B5B119C4955600A2C04A /* HiWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
