@@ -7,9 +7,11 @@
 //
 
 #import "HiHistoryTableViewController.h"
+#import "HiAppDelegate.h"
+#import "Day.h"
 
 @interface HiHistoryTableViewController ()
-
+@property (strong, nonatomic) NSArray *days;
 @end
 
 @implementation HiHistoryTableViewController
@@ -26,12 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSManagedObjectContext *context = ((HiAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    NSFetchRequest *fr = [[NSFetchRequest alloc] initWithEntityName:@"Day"];
+    NSSortDescriptor *daySort = [[NSSortDescriptor alloc] initWithKey:@"day" ascending:NO];
+    NSSortDescriptor *monthSort = [[NSSortDescriptor alloc] initWithKey:@"month" ascending:NO];
+    NSSortDescriptor *yearSort = [[NSSortDescriptor alloc] initWithKey:@"year" ascending:NO];
+    fr.sortDescriptors = @[daySort, monthSort, yearSort];
+    
+    self.days = [context executeFetchRequest:fr error:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,14 +66,14 @@
     if (section == 0) {
         return 1;
     } else {
-        return 12;
+        return self.days.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryCell" forIndexPath:indexPath];
-
+    
     if ([indexPath section] == 0) {
         [[cell textLabel] setText:@"7 day streak"];
         [[cell detailTextLabel] setText:@"Awesome!"];
@@ -83,7 +88,8 @@
     } else {
         dayWaterAmount = arc4random() % 100;
     }
-    [[cell textLabel] setText:@"[Date]"];
+    Day *date = self.days[indexPath.item];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%i-%i-%i", date.month, date.day, date.year]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%", dayWaterAmount]];
     return cell;
 }
