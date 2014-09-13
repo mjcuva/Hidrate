@@ -1,0 +1,6 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#import "Pods-Hidrate-environment.h"
+#import "BEAN_Globals.h"
