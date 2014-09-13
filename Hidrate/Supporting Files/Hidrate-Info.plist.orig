@@ -20,11 +20,12 @@
 	<string>0.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-<<<<<<< HEAD
-=======
 	<key>CFBundleVersion</key>
-	<string>28</string>
->>>>>>> 352cc67a91ec380335faa52a7edc220ac5d8f35a
+<<<<<<< HEAD
+	<string>19</string>
+=======
+	<string>12</string>
+>>>>>>> master
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
