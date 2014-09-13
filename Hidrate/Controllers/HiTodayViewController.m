@@ -82,8 +82,6 @@ const int HIGH_WATER_DIFF_PX = 284;
 
 - (void)viewDidLoad
 {
-    [[self navigationItem] setHidesBackButton:YES];
-
     self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self];
 }
 
