@@ -22,15 +22,6 @@
 const int LOW_WATER_PX = 383;
 const int HIGH_WATER_DIFF_PX = 284;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)beanManagerDidUpdateState:(PTDBeanManager *)beanManager
 {
     if (self.beanManager.state == BeanManagerState_PoweredOn) {
@@ -79,7 +70,8 @@ const int HIGH_WATER_DIFF_PX = 284;
     [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
 }
 
-- (void)fetchData{
+- (void)fetchData
+{
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
@@ -88,8 +80,7 @@ const int HIGH_WATER_DIFF_PX = 284;
 {
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     float drank = stringData.floatValue * 2;
-    
-    
+
     DDLogVerbose(@"Received data: %f", drank);
 }
 
@@ -148,6 +139,17 @@ const int HIGH_WATER_DIFF_PX = 284;
 {
     [self setWaterPercentConsumed:[sender value]];
     [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
+}
+
+- (IBAction)sendTestNotification:(UIButton *)sender
+{
+    DDLogVerbose(@"Sending test notification.");
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
+    localNotification.alertBody = @"Hi! It's time to drink more water.";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
