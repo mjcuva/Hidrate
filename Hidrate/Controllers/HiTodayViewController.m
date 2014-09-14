@@ -82,12 +82,14 @@ const int HIGH_WATER_DIFF_PX = 284;
 - (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
 {
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    float drank = stringData.floatValue * 2;
+    float drank = stringData.floatValue;
+    
+    float amt = drank/7.5/60*33.8 * 2.4;
     
     Day *d = [self getToday];
     User *u = [self getUser];
     
-    float newDrank = d.amountDrank + drank;
+    float newDrank = d.amountDrank + amt;
     d.amountDrank = newDrank;
     float inLiter = newDrank / 33.814;
     
@@ -99,6 +101,8 @@ const int HIGH_WATER_DIFF_PX = 284;
         [self setWaterPercentConsumed:(int)percent];     
         [self setBottlesRemaining:left];
     }];
+    
+    DDLogInfo(@"AMOUNT DRANK %f", d.amountDrank);
     
     [self saveDay:d];
 
@@ -151,21 +155,25 @@ const int HIGH_WATER_DIFF_PX = 284;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{ self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self]; });
     
+    [[self navigationItem]
+        setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hidrate-logo-navbar.png"]]];
+}
+
+- (void)viewDidLayoutSubviews{
     Day *today = [self getToday];
     User *u = [self getUser];
     if(today.amountDrank != 0){
-        [self setWaterPercentConsumed:((today.amountDrank / 33.814) / (u.dailyWaterNeed / 1000)) * 100];
+        int waterPercentConsumed = ((today.amountDrank / 33.814) / (u.dailyWaterNeed / 1000)) * 100;
+        [self setWaterPercentConsumed:waterPercentConsumed];
         float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
         [self setBottlesRemaining:left];
     }
-    
-    [[self navigationItem]
-        setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hidrate-logo-navbar.png"]]];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
 {
     if (percent >= 100) {
+        percent = 100;
         [[self checkmarkImage] setHidden:NO];
         [[self waterPercentLabel] setHidden:YES];
     } else {
@@ -175,8 +183,6 @@ const int HIGH_WATER_DIFF_PX = 284;
     }
     int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * percent) / 100);
     [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
-    [self.waterPercentLabel setNeedsDisplay];
-    [self.wavesImage setNeedsDisplay];
 }
 
 - (void)setBottlesRemaining:(float)bottles
