@@ -75,8 +75,8 @@ const int HIGH_WATER_DIFF_PX = 284;
 
 - (void)fetchData
 {
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
+    [self.connectedBean sendSerialString:@"0"];
+    [self.connectedBean sendSerialString:@"0"];
 }
 
 - (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
