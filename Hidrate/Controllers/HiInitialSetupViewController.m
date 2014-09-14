@@ -110,6 +110,52 @@
             u.gender = @"Female";
         }
 
+        u.centimeters = 30.480*u.feet + 2.54*u.inches;
+        
+        if( [u.gender isEqualToString:@"Female"]){
+            u.bmr = 447.593
+                + 9.247*(u.weight*0.453) //bmr weight factor with lb->kg conversion
+                + 3.098*u.centimeters     //bmr height factor
+                - 4.330*u.age;            //bmr age factor
+            
+            if( age < 4 )
+                u.dailyWaterNeed = 0.93 * u.bmr;
+            else if( age < 9)
+                u.dailyWaterNeed = 1.06 * u.bmr;
+            else if( age < 14)
+                u.dailyWaterNeed = 1.05 * u.bmr;
+            else if( age < 19)
+                u.dailyWaterNeed = 1.15 * u.bmr;
+            else if( age < 31)
+                u.dailyWaterNeed = 1.23 * u.bmr;
+            else if( age < 51)
+                u.dailyWaterNeed = 1.35 * u.bmr;
+            else if( age >= 51)
+                u.dailyWaterNeed = 1.5 * u.bmr;
+        }
+        else{
+            u.bmr = 88.362
+            + 13.397*(u.weight*0.453) //bmr weight factor with lb->kg conversion
+            + 4.799*u.centimeters     //bmr height factor
+            - 5.677*u.age;            //bmr age factor
+            
+            if( age < 4 )
+                u.dailyWaterNeed = 0.93 * u.bmr;
+            else if( age < 9)
+                u.dailyWaterNeed = 1.06 * u.bmr;
+            else if( age < 14)
+                u.dailyWaterNeed = 1.20 * u.bmr;
+            else if( age < 19)
+                u.dailyWaterNeed = 1.18 * u.bmr;
+            else if( age < 31)
+                u.dailyWaterNeed = 1.32 * u.bmr;
+            else if( age < 51)
+                u.dailyWaterNeed = 1.42 * u.bmr;
+            else if( age >= 51)
+                u.dailyWaterNeed = 1.54 * u.bmr;
+            
+        }
+        
         [context save:NULL];
 
         [self performSegueWithIdentifier:@"showToday" sender:self];
