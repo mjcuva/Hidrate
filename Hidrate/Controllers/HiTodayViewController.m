@@ -88,8 +88,7 @@ const int HIGH_WATER_DIFF_PX = 284;
 {
     [[self navigationItem] setHidesBackButton:YES];
 
-    [self setBeanManager:[AppDelegate beanManager]];
-    [[self beanManager] setDelegate:self];
+    self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
