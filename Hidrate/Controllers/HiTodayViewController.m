@@ -230,6 +230,13 @@ const int HIGH_WATER_DIFF_PX = 284;
 
 - (IBAction)clearTodayProgress:(UIButton *)sender
 {
+    Day *d = [self getToday];
+    User *u = [self getUser];
+    d.amountDrank = 0;
+    [self saveDay:d];
+    [self setWaterPercentConsumed:0];
+    float left = (u.dailyWaterNeed / 1000) - (d.amountDrank / 33.814);
+    [self setBottlesRemaining:left];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
