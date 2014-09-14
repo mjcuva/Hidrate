@@ -105,9 +105,38 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
 }
 
+- (void)setBottlesRemaining:(float)bottles
+{
+    int bottlesX4 = bottles * 4;
+    int quarters = bottlesX4 % 4;
+    NSString *quartersText = @"";
+    if (quarters == 1) {
+        quartersText = @"¼";
+    } else if (quarters == 2) {
+        quartersText = @"½";
+    } else if (quarters == 3) {
+        quartersText = @"¾";
+    }
+
+    NSString *bottleText;
+    if (bottles <= 0.0) {
+        bottleText = @"You're done!\nGreat job.";
+    } else if (bottles < 1 && quarters == 0) {
+        bottleText = @"Just a little\nbit more!";
+    } else if (bottles < 1) {
+        bottleText = [NSString stringWithFormat:@"Just %d%@ of a\nbottle left!", (int)bottles, quartersText];
+    } else if (bottles < 2 && quarters == 0) {
+        bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottle to go", (int)bottles, quartersText];
+    } else {
+        bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottles to go", (int)bottles, quartersText];
+    }
+    [[self waterBottlesLabel] setText:bottleText];
+}
+
 - (IBAction)debugSliderChanged:(UISlider *)sender
 {
     [self setWaterPercentConsumed:[sender value]];
+    [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
