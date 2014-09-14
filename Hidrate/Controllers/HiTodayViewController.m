@@ -96,6 +96,8 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self navigationItem] setHidesBackButton:YES];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{ self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self]; });
+    [[self navigationItem]
+        setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hidrate-logo-navbar.png"]]];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
