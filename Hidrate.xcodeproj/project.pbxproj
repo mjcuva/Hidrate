@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36C70F3019C4FEA700D6D8D1 /* welcome.txt in Resources */ = {isa = PBXBuildFile; fileRef = 36C70F2F19C4FEA700D6D8D1 /* welcome.txt */; };
-		36E37C0E19C4D1D700A9F379 /* HiHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */; };
+		36C70F3319C52AA200D6D8D1 /* HiHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C70F3219C52AA200D6D8D1 /* HiHistoryViewController.m */; };
 		36F8B5B119C4955600A2C04A /* HiWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B019C4955600A2C04A /* HiWelcomeViewController.m */; };
 		36F8B5B419C4956100A2C04A /* HiInitialSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B319C4956100A2C04A /* HiInitialSetupViewController.m */; };
 		36F8B5B719C4956900A2C04A /* HiTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F8B5B619C4956900A2C04A /* HiTodayViewController.m */; };
@@ -44,8 +44,8 @@
 
 /* Begin PBXFileReference section */
 		36C70F2F19C4FEA700D6D8D1 /* welcome.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = welcome.txt; sourceTree = "<group>"; };
-		36E37C0C19C4D1D700A9F379 /* HiHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHistoryTableViewController.h; sourceTree = "<group>"; };
-		36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHistoryTableViewController.m; sourceTree = "<group>"; };
+		36C70F3119C52AA200D6D8D1 /* HiHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHistoryViewController.h; sourceTree = "<group>"; };
+		36C70F3219C52AA200D6D8D1 /* HiHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHistoryViewController.m; sourceTree = "<group>"; };
 		36F8B5AF19C4955600A2C04A /* HiWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiWelcomeViewController.h; sourceTree = "<group>"; };
 		36F8B5B019C4955600A2C04A /* HiWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiWelcomeViewController.m; sourceTree = "<group>"; };
 		36F8B5B219C4956100A2C04A /* HiInitialSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiInitialSetupViewController.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 				36F8B5B319C4956100A2C04A /* HiInitialSetupViewController.m */,
 				36F8B5B519C4956900A2C04A /* HiTodayViewController.h */,
 				36F8B5B619C4956900A2C04A /* HiTodayViewController.m */,
-				36E37C0C19C4D1D700A9F379 /* HiHistoryTableViewController.h */,
-				36E37C0D19C4D1D700A9F379 /* HiHistoryTableViewController.m */,
+				36C70F3119C52AA200D6D8D1 /* HiHistoryViewController.h */,
+				36C70F3219C52AA200D6D8D1 /* HiHistoryViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -402,9 +402,9 @@
 				4949969619C5010400A08B74 /* User.m in Sources */,
 				4949969919C5010500A08B74 /* Day.m in Sources */,
 				4913A56019C3E3DD0038BADB /* main.m in Sources */,
-				36E37C0E19C4D1D700A9F379 /* HiHistoryTableViewController.m in Sources */,
 				4949967E19C4D47600A08B74 /* Model.xcdatamodeld in Sources */,
 				4913A56419C3E3DD0038BADB /* HiAppDelegate.m in Sources */,
+				36C70F3319C52AA200D6D8D1 /* HiHistoryViewController.m in Sources */,
 				36F8B5B119C4955600A2C04A /* HiWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

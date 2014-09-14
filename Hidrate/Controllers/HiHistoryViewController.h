@@ -1,5 +1,5 @@
 //
-//  HiHistoryTableViewController.h
+//  HiHistoryViewController.h
 //  Hidrate
 //
 //  Created by Matthew Lewis on 9/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HiHistoryTableViewController : UITableViewController
+@interface HiHistoryViewController : UIViewController
 
 @end

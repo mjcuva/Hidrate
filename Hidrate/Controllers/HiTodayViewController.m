@@ -102,7 +102,14 @@ const int HIGH_WATER_DIFF_PX = 284;
 
 - (void)setWaterPercentConsumed:(int)percent
 {
-    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
+    if (percent == 100) {
+        [[self checkmarkImage] setHidden:NO];
+        [[self waterPercentLabel] setHidden:YES];
+    } else {
+        [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
+        [[self checkmarkImage] setHidden:YES];
+        [[self waterPercentLabel] setHidden:NO];
+    }
     int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * percent) / 100);
     [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
 }
