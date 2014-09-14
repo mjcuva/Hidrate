@@ -77,10 +77,10 @@ const int HIGH_WATER_DIFF_PX = 284;
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
-    
 }
 
-- (void)fetchData{
+- (void)fetchData
+{
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
