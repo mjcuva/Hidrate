@@ -91,8 +91,42 @@ const int HIGH_WATER_DIFF_PX = 284;
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     float drank = stringData.floatValue * 2;
     
+    Day *d = [self getToday];
+    
+    float newDrank = d.amountDrank + drank;
+    float inLiter = newDrank / 33.814;
+    
+    float percent = (inLiter/2.2) * 100;
+    [self setWaterPercentConsumed:(int)percent];
     
     DDLogVerbose(@"Received data: %f", drank);
+}
+
+- (Day *)getToday{
+    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    
+    NSCalendar *cal = [[NSCalendar alloc] init];
+    NSDateComponents *components = [cal components:0 fromDate:[NSDate date]];
+    int year = (int)[components year];
+    int month = (int)[components month];
+    int day = (int)[components day];
+    
+    
+    NSFetchRequest *fr = [NSFetchRequest fetchRequestWithEntityName:@"Day"];
+    fr.predicate = [NSPredicate predicateWithFormat:@"day=%i AND month=%i AND year=%i", day, month, year];
+    
+    NSArray *results = [context executeFetchRequest:fr error:NULL];
+    if(results.count == 0){
+        Day *dayObj = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
+        dayObj.day = day;
+        dayObj.year = year;
+        dayObj.month = month;
+        dayObj.amountDrank = 0;
+        [context save:NULL];
+        return dayObj;
+    }else{
+        return results[0];
+    }
 }
 
 - (void)viewDidLoad
@@ -100,6 +134,12 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self navigationItem] setHidesBackButton:YES];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{ self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self]; });
+    
+    Day *today = [self getToday];
+    if(today.amountDrank != 0){
+        [self setWaterPercentConsumed:(2.2/today.amountDrank) * 100];
+    }
+    
 }
 
 - (void)setWaterPercentConsumed:(int)percent
@@ -107,6 +147,7 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
     int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * percent) / 100);
     [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
+    [self.waterPercentLabel setNeedsDisplay];
 }
 
 - (void)setBottlesRemaining:(float)bottles
@@ -135,12 +176,6 @@ const int HIGH_WATER_DIFF_PX = 284;
         bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottles to go", (int)bottles, quartersText];
     }
     [[self waterBottlesLabel] setText:bottleText];
-}
-
-- (IBAction)debugSliderChanged:(UISlider *)sender
-{
-    [self setWaterPercentConsumed:[sender value]];
-    [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
