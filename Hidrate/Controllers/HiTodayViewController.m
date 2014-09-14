@@ -169,9 +169,9 @@ const int HIGH_WATER_DIFF_PX = 284;
     if (today.amountDrank != 0) {
         int waterPercentConsumed = ((today.amountDrank / 33.814) / (u.dailyWaterNeed / 1000)) * 100;
         [self setWaterPercentConsumed:waterPercentConsumed];
-        float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
-        [self setBottlesRemaining:left];
     }
+    float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
+    [self setBottlesRemaining:left];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
