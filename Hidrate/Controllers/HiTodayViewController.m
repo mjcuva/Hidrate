@@ -44,7 +44,6 @@ const int HIGH_WATER_DIFF_PX = 284;
         return;
     }
 
-    
     if (self.connectedBean == nil && [bean.name isEqualToString:@"The Big Bean"]) {
         NSError *error;
         [self.beanManager connectToBean:bean error:&error];
@@ -70,66 +69,68 @@ const int HIGH_WATER_DIFF_PX = 284;
     // do stuff with your bean
     // Send twice due to bug
     [self fetchData];
-    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
 }
 
 - (void)fetchData
 {
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
+    [self.connectedBean sendSerialString:@"0"];
+    [self.connectedBean sendSerialString:@"0"];
 }
 
 - (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
 {
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     float drank = stringData.floatValue;
-    
-    float amt = drank/7.5/60*33.8 * 2.4;
-    
+
+    float amt = drank / 7.5 / 60 * 33.8 * 2.4;
+
     Day *d = [self getToday];
     User *u = [self getUser];
-    
+
     float newDrank = d.amountDrank + amt;
     d.amountDrank = newDrank;
     float inLiter = newDrank / 33.814;
-    
+
     float percent = (inLiter / (u.dailyWaterNeed / 1000)) * 100;
-    
+
     float left = (u.dailyWaterNeed / 1000) - inLiter;
-    
+
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        [self setWaterPercentConsumed:(int)percent];     
+        [self setWaterPercentConsumed:(int)percent];
         [self setBottlesRemaining:left];
     }];
-    
+
     DDLogInfo(@"AMOUNT DRANK %f", d.amountDrank);
-    
+
     [self saveDay:d];
 
-    
     DDLogVerbose(@"Received data: %f", drank);
 }
 
-- (void)saveDay:(Day *)day{
-    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+- (void)saveDay:(Day *)day
+{
+    NSManagedObjectContext *context =
+        ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     [context save:NULL];
 }
 
-- (Day *)getToday{
-    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
-    
+- (Day *)getToday
+{
+    NSManagedObjectContext *context =
+        ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+
     NSCalendar *cal = [[NSCalendar alloc] init];
     NSDateComponents *components = [cal components:0 fromDate:[NSDate date]];
     int year = (int)[components year];
     int month = (int)[components month];
     int day = (int)[components day];
-    
-    
+
     NSFetchRequest *fr = [NSFetchRequest fetchRequestWithEntityName:@"Day"];
     fr.predicate = [NSPredicate predicateWithFormat:@"day=%i AND month=%i AND year=%i", day, month, year];
-    
+
     NSArray *results = [context executeFetchRequest:fr error:NULL];
-    if(results.count == 0){
+    if (results.count == 0) {
         Day *dayObj = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
         dayObj.day = day;
         dayObj.year = year;
@@ -137,13 +138,15 @@ const int HIGH_WATER_DIFF_PX = 284;
         dayObj.amountDrank = 0;
         [context save:NULL];
         return dayObj;
-    }else{
+    } else {
         return results[0];
     }
 }
 
-- (User *)getUser{
-    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+- (User *)getUser
+{
+    NSManagedObjectContext *context =
+        ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     NSFetchRequest *fr = [NSFetchRequest fetchRequestWithEntityName:@"User"];
     NSArray *results = [context executeFetchRequest:fr error:NULL];
     return results[0];
@@ -154,20 +157,21 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self navigationItem] setHidesBackButton:YES];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{ self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self]; });
-    
+
     [[self navigationItem]
         setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hidrate-logo-navbar.png"]]];
 }
 
-- (void)viewDidLayoutSubviews{
+- (void)viewDidLayoutSubviews
+{
     Day *today = [self getToday];
     User *u = [self getUser];
-    if(today.amountDrank != 0){
+    if (today.amountDrank != 0) {
         int waterPercentConsumed = ((today.amountDrank / 33.814) / (u.dailyWaterNeed / 1000)) * 100;
         [self setWaterPercentConsumed:waterPercentConsumed];
-        float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
-        [self setBottlesRemaining:left];
     }
+    float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
+    [self setBottlesRemaining:left];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
@@ -213,12 +217,6 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[self waterBottlesLabel] setText:bottleText];
 }
 
-//- (IBAction)debugSliderChanged:(UISlider *)sender
-//{
-//    [self setWaterPercentConsumed:[sender value]];
-//    [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
-//}
-
 - (IBAction)sendTestNotification:(UIButton *)sender
 {
     DDLogVerbose(@"Sending test notification.");
@@ -228,6 +226,17 @@ const int HIGH_WATER_DIFF_PX = 284;
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+- (IBAction)clearTodayProgress:(UIButton *)sender
+{
+    Day *d = [self getToday];
+    User *u = [self getUser];
+    d.amountDrank = 0;
+    [self saveDay:d];
+    [self setWaterPercentConsumed:0];
+    float left = (u.dailyWaterNeed / 1000) - (d.amountDrank / 33.814);
+    [self setBottlesRemaining:left];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
