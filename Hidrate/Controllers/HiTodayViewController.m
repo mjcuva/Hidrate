@@ -228,6 +228,10 @@ const int HIGH_WATER_DIFF_PX = 284;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
+- (IBAction)clearTodayProgress:(UIButton *)sender
+{
+}
+
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
 {
 }
