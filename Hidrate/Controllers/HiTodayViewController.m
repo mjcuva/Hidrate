@@ -51,13 +51,14 @@ const int HIGH_WATER_DIFF_PX = 284;
     if (error) {
         return;
     }
-    if (self.connectedBean == nil) {
+    if (self.connectedBean == nil && [bean.name isEqualToString:@"The Big Bean"]) {
         NSError *error;
         [self.beanManager connectToBean:bean error:&error];
         if (error) {
             DDLogError(@"Error in didDiscoverBean: %@", error);
         }
         self.connectedBean = bean;
+        bean.delegate = self;
     }
 }
 
@@ -74,13 +75,11 @@ const int HIGH_WATER_DIFF_PX = 284;
     }
     // do stuff with your bean
     // Send twice due to bug
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
-    [self.connectedBean sendSerialString:@"DATA PLZ"];
+    [self fetchData];
     [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
 }
 
-- (void)fetchData
-{
+- (void)fetchData{
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
@@ -88,7 +87,10 @@ const int HIGH_WATER_DIFF_PX = 284;
 - (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
 {
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    DDLogVerbose(@"Received data: %@", stringData);
+    float drank = stringData.floatValue * 2;
+    
+    
+    DDLogVerbose(@"Received data: %f", drank);
 }
 
 - (void)viewDidLoad
