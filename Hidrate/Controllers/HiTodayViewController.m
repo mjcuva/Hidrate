@@ -70,7 +70,7 @@ const int HIGH_WATER_DIFF_PX = 284;
     // do stuff with your bean
     // Send twice due to bug
     [self fetchData];
-    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
 }
 
 - (void)fetchData
