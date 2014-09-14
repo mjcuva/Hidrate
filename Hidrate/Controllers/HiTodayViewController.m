@@ -10,6 +10,7 @@
 #import "PTDBeanManager.h"
 #import "HiAppDelegate.h"
 #import "Day.h"
+#import "User.h"
 
 @interface HiTodayViewController ()<PTDBeanManagerDelegate, PTDBeanDelegate>
 @property (strong, nonatomic) PTDBeanManager *beanManager;
@@ -21,15 +22,6 @@
 
 const int LOW_WATER_PX = 383;
 const int HIGH_WATER_DIFF_PX = 284;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)beanManagerDidUpdateState:(PTDBeanManager *)beanManager
 {
@@ -51,6 +43,8 @@ const int HIGH_WATER_DIFF_PX = 284;
     if (error) {
         return;
     }
+
+    
     if (self.connectedBean == nil && [bean.name isEqualToString:@"The Big Bean"]) {
         NSError *error;
         [self.beanManager connectToBean:bean error:&error];
@@ -77,11 +71,10 @@ const int HIGH_WATER_DIFF_PX = 284;
     // Send twice due to bug
     [self fetchData];
     [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
-    [bean setLedColor:nil];
-    
 }
 
-- (void)fetchData{
+- (void)fetchData
+{
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
@@ -92,14 +85,30 @@ const int HIGH_WATER_DIFF_PX = 284;
     float drank = stringData.floatValue * 2;
     
     Day *d = [self getToday];
+    User *u = [self getUser];
     
     float newDrank = d.amountDrank + drank;
+    d.amountDrank = newDrank;
     float inLiter = newDrank / 33.814;
     
-    float percent = (inLiter/2.2) * 100;
-    [self setWaterPercentConsumed:(int)percent];
+    float percent = (inLiter / (u.dailyWaterNeed / 1000)) * 100;
+    
+    float left = (u.dailyWaterNeed / 1000) - inLiter;
+    
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self setWaterPercentConsumed:(int)percent];     
+        [self setBottlesRemaining:left];
+    }];
+    
+    [self saveDay:d];
+
     
     DDLogVerbose(@"Received data: %f", drank);
+}
+
+- (void)saveDay:(Day *)day{
+    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    [context save:NULL];
 }
 
 - (Day *)getToday{
@@ -129,6 +138,13 @@ const int HIGH_WATER_DIFF_PX = 284;
     }
 }
 
+- (User *)getUser{
+    NSManagedObjectContext *context = ((HiAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    NSFetchRequest *fr = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSArray *results = [context executeFetchRequest:fr error:NULL];
+    return results[0];
+}
+
 - (void)viewDidLoad
 {
     [[self navigationItem] setHidesBackButton:YES];
@@ -136,18 +152,31 @@ const int HIGH_WATER_DIFF_PX = 284;
     dispatch_once(&onceToken, ^{ self.beanManager = [[PTDBeanManager alloc] initWithDelegate:self]; });
     
     Day *today = [self getToday];
+    User *u = [self getUser];
     if(today.amountDrank != 0){
-        [self setWaterPercentConsumed:(2.2/today.amountDrank) * 100];
+        [self setWaterPercentConsumed:((today.amountDrank / 33.814) / (u.dailyWaterNeed / 1000)) * 100];
+        float left = (u.dailyWaterNeed / 1000) - (today.amountDrank / 33.814);
+        [self setBottlesRemaining:left];
     }
     
+    [[self navigationItem]
+        setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hidrate-logo-navbar.png"]]];
 }
 
 - (void)setWaterPercentConsumed:(int)percent
 {
-    [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
+    if (percent >= 100) {
+        [[self checkmarkImage] setHidden:NO];
+        [[self waterPercentLabel] setHidden:YES];
+    } else {
+        [[self waterPercentLabel] setText:[NSString stringWithFormat:@"%d%%", percent]];
+        [[self checkmarkImage] setHidden:YES];
+        [[self waterPercentLabel] setHidden:NO];
+    }
     int waves_pos = LOW_WATER_PX - ((HIGH_WATER_DIFF_PX * percent) / 100);
     [[self wavesImage] setFrame:CGRectMake(26, waves_pos, 261, 302)];
     [self.waterPercentLabel setNeedsDisplay];
+    [self.wavesImage setNeedsDisplay];
 }
 
 - (void)setBottlesRemaining:(float)bottles
@@ -169,13 +198,30 @@ const int HIGH_WATER_DIFF_PX = 284;
     } else if (bottles < 1 && quarters == 0) {
         bottleText = @"Just a little\nbit more!";
     } else if (bottles < 1) {
-        bottleText = [NSString stringWithFormat:@"Just %d%@ of a\nbottle left!", (int)bottles, quartersText];
+        bottleText = [NSString stringWithFormat:@"Just %@ of a\nbottle left!", quartersText];
     } else if (bottles < 2 && quarters == 0) {
         bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottle to go", (int)bottles, quartersText];
     } else {
         bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottles to go", (int)bottles, quartersText];
     }
     [[self waterBottlesLabel] setText:bottleText];
+}
+
+//- (IBAction)debugSliderChanged:(UISlider *)sender
+//{
+//    [self setWaterPercentConsumed:[sender value]];
+//    [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
+//}
+
+- (IBAction)sendTestNotification:(UIButton *)sender
+{
+    DDLogVerbose(@"Sending test notification.");
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
+    localNotification.alertBody = @"Hi! It's time to drink more water.";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue

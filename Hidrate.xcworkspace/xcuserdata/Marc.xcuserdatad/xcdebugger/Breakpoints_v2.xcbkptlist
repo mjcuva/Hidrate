@@ -10,28 +10,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hidrate/Controllers/HiTodayViewController.m"
-            timestampString = "432353214.834641"
+            timestampString = "432408305.869129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-setWaterPercentConsumed:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             condition = "stringData.floatValue &gt; 0"
             continueAfterRunningActions = "No"
             filePath = "Hidrate/Controllers/HiTodayViewController.m"
-            timestampString = "432352978.121453"
+            timestampString = "432408238.911348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-bean:serialDataReceived:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hidrate/Controllers/HiTodayViewController.m"
+            timestampString = "432408238.911348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "-bean:serialDataReceived:"
             landmarkType = "5">
          </BreakpointContent>

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *waterPercentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *waterBottlesLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *wavesImage;
+@property (weak, nonatomic) IBOutlet UIImageView *checkmarkImage;
 
 - (void)setWaterPercentConsumed:(int)percent;
 - (void)setBottlesRemaining:(float)bottles;
