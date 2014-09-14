@@ -150,6 +150,17 @@ const int HIGH_WATER_DIFF_PX = 284;
     [self setBottlesRemaining:(float)(100 - [sender value]) / 25];
 }
 
+- (IBAction)sendTestNotification:(UIButton *)sender
+{
+    DDLogVerbose(@"Sending test notification.");
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
+    localNotification.alertBody = @"Hi! It's time to drink more water.";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
 - (IBAction)unwindToToday:(UIStoryboardSegue *)segue
 {
 }
