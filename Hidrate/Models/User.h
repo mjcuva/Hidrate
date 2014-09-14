@@ -2,7 +2,7 @@
 //  User.h
 //  Hidrate
 //
-//  Created by Marc Cuva on 9/13/14.
+//  Created by Nicholas Padilla on 9/13/14.
 //  Copyright (c) 2014 Hidrate. All rights reserved.
 //
 
@@ -17,5 +17,9 @@
 @property (nonatomic, retain) NSString * gender;
 @property (nonatomic) int16_t inches;
 @property (nonatomic) double weight;
+@property (nonatomic) int16_t me;
+@property (nonatomic) float bmr;
+@property (nonatomic) float centimeters;
+@property (nonatomic) float dailyWaterNeed; //ml
 
 @end
