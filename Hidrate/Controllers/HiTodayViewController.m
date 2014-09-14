@@ -76,6 +76,13 @@ const int HIGH_WATER_DIFF_PX = 284;
     // Send twice due to bug
     [self.connectedBean sendSerialString:@"DATA PLZ"];
     [self.connectedBean sendSerialString:@"DATA PLZ"];
+    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fetchData) userInfo:nil repeats:YES];
+    
+}
+
+- (void)fetchData{
+    [self.connectedBean sendSerialString:@"DATA PLZ"];
+    [self.connectedBean sendSerialString:@"DATA PLZ"];
 }
 
 - (void)bean:(PTDBean *)bean serialDataReceived:(NSData *)data
