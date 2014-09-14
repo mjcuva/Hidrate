@@ -124,7 +124,7 @@ const int HIGH_WATER_DIFF_PX = 284;
     } else if (bottles < 1 && quarters == 0) {
         bottleText = @"Just a little\nbit more!";
     } else if (bottles < 1) {
-        bottleText = [NSString stringWithFormat:@"Just %d%@ of a\nbottle left!", (int)bottles, quartersText];
+        bottleText = [NSString stringWithFormat:@"Just %@ of a\nbottle left!", quartersText];
     } else if (bottles < 2 && quarters == 0) {
         bottleText = [NSString stringWithFormat:@"About %d%@ more\nbottle to go", (int)bottles, quartersText];
     } else {
