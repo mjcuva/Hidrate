@@ -83,7 +83,7 @@ const int HIGH_WATER_DIFF_PX = 284;
     NSString *stringData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     float drank = stringData.floatValue;
 
-    float amt = drank / 7.5 / 60 * 33.8 * 2.4;
+
 
     Day *d = [self getToday];
     User *u = [self getUser];
